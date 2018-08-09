@@ -96,7 +96,7 @@ Remember: an entire '[*list*]' set will only match a *single* listed character a
 > > ls sample[2-5].txt
 > > ls sample[AX-Z].txt
 > > ls sample[A-Z][A-Z].txt
-> > ls sample*[A-Z].txt
+> > ls sample\*[A-Z].txt
 > > ~~~
 > > {: .language-bash}
 > {: .solution}
