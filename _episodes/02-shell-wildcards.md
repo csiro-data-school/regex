@@ -41,6 +41,7 @@ sample3.txt  sample6.txt  sample9.txt  sampleC.txt  sampleF.txt
 
 > Write a similar ls command to list .txt files with a 2 digit/char sample number.  
 > Write a similar ls command to list for samples specifically in the range of 10-19.  
+> > ## 
 > > ~~~
 > > ls sample??.txt
 > > ls sample1?.txt
@@ -92,6 +93,7 @@ Remember: an entire '[*list*]' set will only match a *single* listed character a
 > Write an ls command to list .txt files for samples denoted by a number followed by a letter
 > (e.g. sample1A).  
 > Write an ls command to list .txt files for all sample names ending in a letter.  
+> > ## Solution
 > > ~~~
 > > ls sample[2-5].txt
 > > ls sample[AX-Z].txt
