@@ -1,8 +1,14 @@
-# FIXME Lesson title
+# Introduction to regular expressions
 
 [![Create a Slack Account with us](https://img.shields.io/badge/Create_Slack_Account-The_Carpentries-071159.svg)](https://swc-slack-invite.herokuapp.com/)
 
-FIXME
+This tutorial introduces regular expressions through:
+1. Shell wildcards and braket notation
+2. Pattern searching with grep -E
+3. Regex substitution with sed -E
+4. Brief intro to regex functionality in text editors, e.g. including Vim
+5. Brief intro to regex functions in Python
+6. Brief intro to regex functions in R
 
 ## Contributing
 
@@ -15,7 +21,7 @@ how to write new episodes.
 
 ## Maintainer(s)
 
-* FIXME
+Andrew Spriggs, CSIRO Ag&Food, andrew.spriggs@csiro.au
 
 ## Authors
 

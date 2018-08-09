@@ -1,5 +1,4 @@
 ---
-source: Rmd
 title: "Regular Expressions: The pitch"
 teaching: 5
 exercises: 0

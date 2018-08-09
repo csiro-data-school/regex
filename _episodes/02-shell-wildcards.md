@@ -1,5 +1,4 @@
 ---
-source: Rmd
 title: "Shell wildcards - a type of regex"
 teaching: 10
 exercises: 0
@@ -21,6 +20,9 @@ expression. Have you ever used a command like this?
 ls *.txt
 ~~~
 {: .language-bash}
-It's a searchable pattern that means "match anything that ends in .txt".
+It's a searchable pattern which means "match anything that ends in .txt".
 The * works as a wildcard, expanding to match *any* zero or more characters.
 
+However, there are other wildcards available that allow for more specific and complex patterns.
+
+The ? wildcard 
