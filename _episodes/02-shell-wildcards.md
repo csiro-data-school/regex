@@ -102,3 +102,11 @@ Remember: an entire '[*list*]' set will only match a *single* listed character a
 > {: .solution}
 {: .challenge}
 
+> ## `.solution`
+>
+> Exercise solution.
+{: .solution}
+
+> Exercise solution2.
+{: .solution}
+
