@@ -8,10 +8,10 @@ objectives:
 - "(Re)Introduce wildcards available in the Unix shell."
 keypoints:
 - "Use of wildcards in the Unix shell is a simple form of regular expressions."
-- "\* matches zero or more characters"
-- "? matches exactly one character"
-- "[ ] matches a character from a list or range of contained options"
-- "{ } matches a word or expression from a list of contained options"
+- "'*' matches zero or more characters"
+- "'?' matches exactly one character"
+- "'[ ]' matches a character from a list or range of contained options"
+- "'{ }' matches a word or expression from a list of contained options"
 ---
 
 While using a Unix shell, you may have already become familiar with a simple form of regular 
@@ -25,12 +25,13 @@ The * works as a wildcard, expanding to match *any* zero or more characters.
 
 However, there are other wildcards available that allow for more specific and complex patterns.
 
-The ? wildcard any character, but always exactly one character.  
+The ? wildcard matched any character, but always exactly one character.  
 For example:
 ~~~
 ls sample?.txt
 ~~~
 {: .language-bash}
+
 ~~~
 sample1.txt  sample4.txt  sample7.txt  sampleA.txt  sampleD.txt  sampleY.txt
 sample2.txt  sample5.txt  sample8.txt  sampleB.txt  sampleE.txt  sampleZ.txt
@@ -48,7 +49,8 @@ sample3.txt  sample6.txt  sample9.txt  sampleC.txt  sampleF.txt
 > {: .solution}
 {: .challenge}
 
-That last challenge was a bit of a gotcha as the solution would have also picked up a sample "1A".
+That last challenge was a bit of a gotcha as the solution using ? 
+would have also picked up a sample "1A".
 Not what we were after, but a good segue for the next concept- 
 matching to a list of options or ranges.
 
@@ -76,13 +78,14 @@ Important: as always on a Unix shell, case matters!  A list of all alphanumeric 
 ~~~
 {: .language-bash}
 
-So back to our earlier challenge of listing files for sample numbers 10-19.  A better solution is:
+So back to our earlier challenge of listing files for sample numbers 10-19.
+A better solution is:
 ~~~
 ls sample1[0-9].txt
 ~~~
 {: .language-bash}
 
-Remember: an entire \[*list*\] set will only match a *single* listed character at a time.
+Remember: an entire '[*list*]' set will only match a *single* listed character at a time.
 
 > Write an ls command to list .txt files for samples 2 to 5.  
 > Write an ls command to list .txt files for samples X, Y and Z and sample A.  
