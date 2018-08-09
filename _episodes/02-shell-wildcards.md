@@ -11,6 +11,7 @@ keypoints:
 - "'*' matches zero or more characters"
 - "'?' matches exactly one character"
 - "'[ ]' matches a character from a list or range of contained options"
+- "'[! ]' matches a character NOT in a list or range of contained options"
 - "'{ }' matches a word or expression from a list of contained options"
 ---
 
@@ -24,6 +25,7 @@ It's a searchable pattern which means "match anything that ends in .txt".
 The * works as a wildcard, expanding to match *any* zero or more characters.
 
 However, there are other wildcards available that allow for more specific and complex patterns.
+
 
 The ? wildcard matched any character, but always exactly one character.  
 For example:
@@ -54,10 +56,11 @@ sample3.txt  sample6.txt  sample9.txt  sampleC.txt  sampleF.txt
 > {: .solution}
 {: .challenge}
 
-That last challenge was a bit of a gotcha as the solution using ? 
+That last challenge was a bit of a gotcha. The solution using '?' 
 would have also picked up a sample "1A".
 Not what we were after, but a good segue for the next concept- 
 matching to a list of options or ranges.
+
 
 Use of square brackets \[*list*\] allows matching to a single character, 
 where that character has to match any of the options listed between the brackets.
@@ -112,3 +115,36 @@ Remember: an entire '[*list*]' set will only match a *single* listed character a
 > {: .solution}
 {: .challenge}
 
+
+Connected to the square bracket notation is the Not notation '[! ]'. 
+Use of a '!' inside '[ ]' makes it match to any single character NOT in the list.  
+E.g. 
+~~~
+[!A]
+~~~
+{: .language-bash}
+... would match any character that's not A.
+~~~
+[!0-9]
+~~~
+{: .language-bash}
+... would match any character that's not a digit from 0 to 9.
+
+> ## Challenge
+> 
+> Write an ls command to list .txt files for all samples *other* than those numbered 4 to 7 and 9.
+>  
+> > ## Solution
+> >
+> > ~~~
+> > ls sample[!4-79]*.txt
+> > ~~~
+> > {: .language-bash}
+> {: .solution}
+{: .challenge}
+
+
+Lastly for this section we have the curly brackets '{ }'. 
+Like for square brackets, curly brackets lets you match to one of the options listed inside.
+The difference is, this time we list not just single characters, but entire words or expressions
+to choose between.  
