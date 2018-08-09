@@ -1,0 +1,26 @@
+---
+source: Rmd
+title: "Shell wildcards - a type of regex"
+teaching: 10
+exercises: 0
+questions:
+- "Are regular expressions available in standard Unix commands?"
+objectives:
+- "(Re)Introduce wildcards available in the Unix shell."
+keypoints:
+- "Use of wildcards in the Unix shell is a simple form of regular expressions."
+- "* matches zero or more characters"
+- "? matches exactly one character"
+- "[] matches a character from a list or range of contained options"
+- "{} matches a word or expression from a list of contained options"
+---
+
+While using a Unix shell, you may have already become familiar with a simple form of regular 
+expression. Have you ever used a command like this?
+~~~
+ls *.txt
+~~~
+{: .language-bash}
+It's a searchable pattern that means "match anything that ends in .txt".
+The * works as a wildcard, expanding to match *any* zero or more characters.
+
