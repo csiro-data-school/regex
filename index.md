@@ -13,10 +13,10 @@ This tutorial introduces regular expressions through:
 
 > ## Prerequisites
 >
-> Basic Unix command line familiarity, inc. cd, ls, cat, grep, echo
-> Basic Vim usage
-> Basic Python usage
-> Basic R usage
+> Basic Unix command line familiarity, inc. cd, ls, cat, grep, echo  
+> Basic Vim usage  
+> Basic Python usage  
+> Basic R usage  
 {: .prereq}
 
 {% include links.md %}
