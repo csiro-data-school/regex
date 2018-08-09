@@ -22,12 +22,12 @@ ls *.txt
 ~~~
 {: .language-bash}
 It's a searchable pattern which means "match anything that ends in .txt".
-The * works as a wildcard, expanding to match *any* zero or more characters.
+The * works as a wildcard, expanding to match *any* of zero or more characters.
 
 However, there are other wildcards available that allow for more specific and complex patterns.
 
 
-The ? wildcard matched any character, but always exactly one character.  
+The ? wildcard matches any character, but always exactly one character.  
 For example:
 ~~~
 ls sample?.txt
@@ -62,9 +62,9 @@ Not what we were after, but a good segue for the next concept-
 matching to a list of options or ranges.
 
 
-Use of square brackets \[*list*\] allows matching to a single character, 
+Use of square brackets \[ *list* \] allows matching to a single character, 
 where that character has to match any of the options listed between the brackets.
-The brackets may contain a list or a range or a mix of both. 
+The brackets may contain a list, or a range, or a mix of both. 
 For example, to match any one digit from 0 to 9, the following are equivalent:
 ~~~
 [0123456789]
@@ -148,3 +148,42 @@ Lastly for this section we have the curly brackets '{ }'.
 Like for square brackets, curly brackets lets you match to one of the options listed inside.
 The difference is, this time we list not just single characters, but entire words or expressions
 to choose between.  
+E.g. '{alpha,beta,gamma}' would match 'alpha' OR 'beta' OR 'gamma'.  
+
+Real example:
+~~~
+> ls sample11.{txt,tab,csv}
+> sample11.csv  sample11.tab  sample11.txt
+~~~
+{: .language-bash}
+
+You can use other wildcard patterns within the listed options.
+So these are equivalent:
+~~~
+> ls *.{tab,csv}
+> ls {*.tab,*.csv}
+~~~
+{: .language-bash}
+
+And these are equivalent:
+~~~
+> ls sample[A-Z0-9].txt
+> ls sample{[A-Z],[0-9]}.txt
+~~~
+{: .language-bash}
+
+
+> ## Challenge
+> 
+> 1. Write an ls command to list files for samples 4, 10 and CD.
+> 2. Write an ls command to list just .csv and .tab files for samples 11 and CD.
+>  
+> > ## Solution
+> >
+> > ~~~
+> > ls sample{4,10,CD}.*
+> > ls sample{11,CD}.{csv,tab}
+> > ~~~
+> > {: .language-bash}
+> {: .solution}
+{: .challenge}
