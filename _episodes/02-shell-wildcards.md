@@ -1,18 +1,19 @@
 ---
 title: "Shell wildcards - a type of regex"
 teaching: 30
-exercises: 0
+exercises: 9
 questions:
 - "Are regular expressions available in standard Unix commands?"
 objectives:
 - "(Re)Introduce wildcards available in the Unix shell."
+- "'*', '?', '[ ]', '[! ]' and '{ }'"
 keypoints:
 - "Use of wildcards in the Unix shell is a simple form of regular expressions."
 - "'*' matches zero or more characters"
 - "'?' matches exactly one character"
 - "'[ ]' matches a character from a list or range of contained options"
 - "'[! ]' matches a character NOT in a list or range of contained options"
-- "'{ }' matches a word or expression from a list of contained options"
+- "'{ }' expands to produce forms of all listed contained options"
 ---
 
 While using a Unix shell, you may have already become familiar with a simple form of regular 
@@ -116,7 +117,7 @@ Remember: an entire '[*list*]' set will only match a *single* listed character a
 {: .challenge}
 
 
-Connected to the square bracket notation is the Not notation '[! ]'. 
+Connected to the square bracket notation is the NOT(!) symbol '[! ]'. 
 Use of a '!' inside '[ ]' makes it match to any single character NOT in the list.  
 E.g. 
 ~~~
@@ -172,18 +173,53 @@ And these are equivalent:
 ~~~
 {: .language-bash}
 
+The curly braces actually have their own range capability, 
+even more powerful in that it allows for more than single digit numbers:
+~~~
+> ls sample{1..15}.txt
+> ls sample{A..C}.txt
+~~~
+{: .language-bash}
+
+BUT if you've spotted the warnings while trying these examples, you may have guessed the catch
+with using curly brackets- They *aren't* actually a form of pattern matching!  Rather, the first 
+thing a shell does is expand the brackets out to form *all posibilities* listed, in full.
+
+So, when you run the first command below, you're *actually* executing the second command below:
+~~~
+> ls sample{A..C}.txt
+> ls sampleA.txt sampleB.txt sampleC.txt
+~~~
+{: .language-bash}
+
+Contrast:
+~~~
+> echo [A-C][1-3]
+> [A-C][1-3]
+>
+> echo {A..C}{1..3}
+> A1 A2 A3 B1 B2 B3 C1 C2 C3
+~~~
+{: .language-bash}
+
+Brace expansion is always the first order of business when the command line interprets a command.
+It's a useful tool, and while not quite fitting the regular expression theme, the concept
+of listing longer options in a this-OR-that fashion will be visited again in proper regexs.
 
 > ## Challenge
 > 
-> 1. Write an ls command to list files for samples 4, 10 and CD.
+> 1. Write an ls command to list files for samples 8 to 13 and CD.
 > 2. Write an ls command to list just .csv and .tab files for samples 11 and CD.
 >  
 > > ## Solution
 > >
 > > ~~~
-> > ls sample{4,10,CD}.*
+> > ls sample{{8..13},CD}.*
 > > ls sample{11,CD}.{csv,tab}
 > > ~~~
 > > {: .language-bash}
 > {: .solution}
 {: .challenge}
+
+While syntax will differ, the concepts learnt here will remain very relevant
+as we next move onto more advanced forms of regular expression.
