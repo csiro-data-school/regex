@@ -8,7 +8,7 @@ objectives:
 - "Learn the basic syntax of Extended Regular Expressions, using grep -E"
 keypoints:
 - "grep in Extended Regex mode (or egrep) allows complex pattern matching in files/streams."
-- "'|' acts as an OR between options"
+- "'\|' acts as an OR between options"
 - "'( )' allows grouping, e.g. for OR modifier, with quantifiers, etc.."
 - "'[ ]' matches a character from a list or range of contained options"
 - "'[^ ]' matches a character NOT in a list or range of contained options"
