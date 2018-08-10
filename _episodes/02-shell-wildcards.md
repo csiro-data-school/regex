@@ -1,6 +1,6 @@
 ---
 title: "Shell wildcards - a type of regex"
-teaching: 30
+teaching: 60
 exercises: 9
 questions:
 - "Are regular expressions available in standard Unix commands?"
@@ -26,6 +26,8 @@ It's a searchable pattern which means "match anything that ends in .txt".
 The * works as a wildcard, expanding to match *any* of zero or more characters.
 
 However, there are other wildcards available that allow for more specific and complex patterns.
+
+
 
 ## '?' to match any single character
 
@@ -62,6 +64,8 @@ That last challenge was a bit of a gotcha. The solution using '?'
 would have also picked up a sample "1A".
 Not what we were after, but a good segue for the next concept- 
 matching to a list of options or ranges.
+
+
 
 ## '[ ]' to match any single character in a list or range
 
@@ -119,6 +123,7 @@ Remember: an entire '[*list*]' set will only match a *single* listed character a
 {: .challenge}
 
 
+
 ## '!' to match any single character NOT in a list or range
 
 Connected to the square bracket notation is the NOT(!) symbol '[! ]'. 
@@ -147,6 +152,7 @@ E.g.
 > > {: .language-bash}
 > {: .solution}
 {: .challenge}
+
 
 
 ## '{ }' to list whole word or expressions as options
