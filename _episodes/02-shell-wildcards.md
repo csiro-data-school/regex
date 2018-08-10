@@ -27,6 +27,7 @@ The * works as a wildcard, expanding to match *any* of zero or more characters.
 
 However, there are other wildcards available that allow for more specific and complex patterns.
 
+## '?' to match any single character
 
 The ? wildcard matches any character, but always exactly one character.  
 For example:
@@ -62,6 +63,7 @@ would have also picked up a sample "1A".
 Not what we were after, but a good segue for the next concept- 
 matching to a list of options or ranges.
 
+## '[ ]' to match any single character in a list or range
 
 Use of square brackets \[ *list* \] allows matching to a single character, 
 where that character has to match any of the options listed between the brackets.
@@ -117,6 +119,8 @@ Remember: an entire '[*list*]' set will only match a *single* listed character a
 {: .challenge}
 
 
+## '!' to match any single character NOT in a list or range
+
 Connected to the square bracket notation is the NOT(!) symbol '[! ]'. 
 Use of a '!' inside '[ ]' makes it match to any single character NOT in the list.  
 E.g. 
@@ -145,11 +149,13 @@ E.g.
 {: .challenge}
 
 
+## '{ }' to list whole word or expressions as options
+
 Lastly for this section we have the curly brackets '{ }'. 
 Like for square brackets, curly brackets lets you match to one of the options listed inside.
 The difference is, this time we list not just single characters, but entire words or expressions
 to choose between.  
-E.g. '{alpha,beta,gamma}' would match 'alpha' OR 'beta' OR 'gamma'.  
+E.g. '{alpha,beta,gamma}' would match 'alpha' and 'beta' and 'gamma'.  
 
 Real example:
 ~~~
