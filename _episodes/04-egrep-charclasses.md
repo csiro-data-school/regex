@@ -9,7 +9,6 @@ objectives:
 keypoints:
 - "grep in Extended Regex mode has a number of predefined character classes"
 - "Examples include:"
-- "\[:alpha:\], \[:alnum:\], \[:digit:\], \[:upper:\], \[:lower:\], \[:punct:\], \[:space:\]"
-- "\\w \\W \\b \\B \\\< and \\\> \\1"
+- " ``` '[:alpha:]', '[:alnum:]', '[:digit:]', '[:upper:]', '[:lower:]', '[:punct:]', '[:space:]' ``` "
 ---
 
