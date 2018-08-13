@@ -9,16 +9,5 @@ objectives:
 keypoints:
 - "grep in Extended Regex mode has a number of predefined character classes"
 - "Examples include:"
-- ""
+- " ~~~ \w \W \b \B \< \> \1 ~~~ "
 ---
-
-~~~
-\w  
-\W  
-\b  
-\B  
-\<  
-\>  
-\1
-~~~
-{: .language-bash}
