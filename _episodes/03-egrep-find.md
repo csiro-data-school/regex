@@ -25,7 +25,7 @@ keypoints:
 You may have used the command 'grep' before, which allows you to search for a matching string.
 It may be given a file name, to mak it search within a file:
 ~~~
-grep "react" wordplay1.txt
+grep 'react' wordplay1.txt
 ~~~
 {: .language-bash}
 ~~~
@@ -34,7 +34,7 @@ trees   shelf   amused  reactive        sheet
 relation        reacting        handsome        ashamed
 ~~~
 {: .output}
-Or it can be piped output from another command to search:
+Or it can search piped output from another command:
 ~~~
 echo "Hello Andrew, you are Andrew?" | grep -o "Andrew"
 ~~~
@@ -184,9 +184,184 @@ echo "1952 1986 2003 1995 2018" | grep -E -o '20[0-9][0-9]'
 > > grep -E -w -o '[a-z]oat' wordplay1.txt
 > > grep -E -w -o '[a-zA-Z]oat' wordplay1.txt
 > > grep -E -w -o '[a-zA-Z][oO][aA][tT]' wordplay1.txt
+> > # OR
+> > grep -E -w -o -i '[a-z]oat' wordplay1.txt
+> > # grep -i ignores case (see 'man grep')
 > > ~~~
 > > {: .language-bash}
 > {: .solution}
 {: .challenge}
+
+
+When used within square brackets, a '^' means "NOT". 
+For example '[^ABC]' would match any one character that *wasn't* A or B or C.
+
+Example:
+~~~
+echo "bog bag cog cot tog log lag" | grep -E -o '[^b][a-z]g'
+~~~
+{: .language-bash}
+~~~
+cog
+tog
+log
+lag
+~~~
+{: .output}
+
+> ## Try it
+> 
+> 1. Modify your 'oat' word finder to find any 4-letter 'oat' words other than 'boat' and 'goat'
+> 
+> > ## Solution
+> >
+> > ~~~
+> > grep -E -w -o '[^bg]oat' wordplay1.txt
+> > ~~~
+> > {: .language-bash}
+> {: .solution}
+{: .challenge}
+
+
+
+## Match start of line ^ or end of line $
+
+The '^' symbol has another use.  When placed at the start of a regex pattern, it anchors the
+pattern such that it must match from the start of a line.  
+Similarly, a '$', when placed at the end of a regex pattern, anchors the pattern such that it
+must match up to the end of a line.  
+Consider the following examples demonstrating the effect:
+~~~
+grep -E 'repeat' wordplay1.txt
+~~~
+{: .language-bash}
+~~~
+repeat  drum    quilt   superficial     uncovered
+copper  bad     unpack  repeat  old-fashioned
+sheet   accessible      word    enthusiastic    repeat
+~~~
+{: .output}
+~~~
+grep -E '^repeat' wordplay1.txt
+~~~
+{: .language-bash}
+~~~
+repeat  drum    quilt   superficial     uncovered
+~~~
+{: .output}
+~~~
+grep -E 'repeat$' wordplay1.txt
+~~~
+{: .language-bash}
+~~~
+sheet   accessible      word    enthusiastic    repeat
+~~~
+{: .output}
+
+There will be more use for these anchors when we get into more complex patterns with wildcards.
+
+
+
+## '.' is the match-anything regex wildcard
+
+Speaking of, the match-anything wildcard (any single character) for regular expressions 
+is a period, '.'
+
+Consider:
+~~~
+grep -E -o '.oat' wordplay1.txt
+~~~
+{: .language-bash}
+~~~
+boat
+        oat
+loat
+coat
+goat
+~~~
+{: .output}
+For the short word "oat", it was the preceeding tab character that the wildcard matched.
+
+One more concept to introduce before we get into some better examples of using this wildcard.
+
+
+
+## Matching multiples of things
+
+What if you wanted to match something that repeated multiple times?  
+Any single character, bracket expression or grouping, can be modified to specify number
+of occurances, with one of the following:
+
+Symbol(s) | Effect
+----|----
+? | Present either one time or *no* times (0-1)
+* | Present *any* number of times, including zero (0+)
++ | Present at least once, but any number of times (1+)
+{n} | Repeated exactly 'n' times
+{n,m} | Repeated between 'n' and 'm' times
+{n,} | Repeated at least 'n' times
+{,m} | Repeated at most 'm' times
+
+For example, what if we wanted to search for 'colour' but maybe it had US spelling?
+~~~
+grep -E 'colou?r' wordplay1.txt
+~~~
+{: .language-bash}
+~~~
+exclusive       color   harbor  boat    bedroom
+~~~
+{: .output}
+Here the '?' modifier let the preceeding 'u' match either one time OR zero times.
+
+
+Lets find all words from our words file that are at least 12 letters long:
+~~~
+grep -E -o '[a-z]{12,}' wordplay1.txt 
+~~~
+{: .language-bash}
+~~~
+materialistic
+distribution
+enthusiastic
+sophisticated
+~~~
+{: .output}
+
+> ## Greediness
+> 
+> Regular expression search patterns are considered "greedy". That is, when you use
+> '+' or '\*' or '{n,}', they will always match the *longest* possible string that 
+> still fits the pattern.  
+> E.g. '.\*', which mean "any character, zero or more times", will always match an entire line
+> without further specific context around it. 
+{: .callout}
+
+What if we wanted to match a date, and didn't know if the year would be 2 digits or 4?
+Our pattern for a date is "a digit, from 0-9, either one or two of them, then a forward slash,
+then a digit, either one or two of them, then either 2 digits or 4 digits." 
+Here "either 2 or 4 digits" is achieved by saying "exactly two digits", then letting that 
+pattern be repeated either once or twice.
+~~~
+echo "11/06/91 5/9/2018" | grep -E -o '[0-9]{1,2}/[0-9]{1,2}/([0-9]{2}){1,2}'
+~~~
+{: .language-bash}
+~~~
+11/06/91
+5/9/2018
+~~~
+{: .output}
+
+Alternatively, if we were sure about the sensibleness of the contents we were searching, 
+we may get away with just:
+~~~
+echo "11/06/91 5/9/2018" | grep -E -o '[0-9]+/[0-9]+/[0-9]+'
+~~~
+{: .language-bash}
+~~~
+11/06/91
+5/9/2018
+~~~
+{: .output}
+
 
 

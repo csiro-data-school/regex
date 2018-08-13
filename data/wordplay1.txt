@@ -11,16 +11,16 @@ relation	reacting	handsome	ashamed
 mess up	feeble	sense	argument	blood
 exclusive	color	harbor	boat	bedroom
 dust	appear	simplistic	workable	admit
-cave	aftermath	outstanding	number	measure
+cave	oat	outstanding	number	measure
 hiding	reward	foot	odd	history
 blink	jolly	adjoining	joyous	sweater
 cow	nebulous	rock	dirty	groan
 thirsty	hug	voracious	flowers	tent
 daffy	pretend	unfasten	handsome	welcome
-pets	drum	quilt	superficial	uncovered
+repeat	drum	quilt	superficial	uncovered
 hanging	berry	married	marked	frogs
 loss	destroy	dirt	shelter	baby
-copper	bad	unpack	vengeful	old-fashioned
+copper	bad	unpack	repeat	old-fashioned
 suit	keen	corn	thin	stem
 wave	snatch	safe	truthful	yard
 harass	haircut	unpack	sparkle	pencil
@@ -35,7 +35,7 @@ paper	goat	shallow	extend	territory
 pass	possessive	labored	minor	arithmetic
 stimulating	thrill	bawdy	warm	pink
 gentle	glib	odd	public	cooing
-sheet	accessible	word	enthusiastic	deceive
+sheet	accessible	word	enthusiastic	repeat
 selection	reaction	mute	alleged	jittery
 orange	sophisticated	income	mist	popcorn
 way
