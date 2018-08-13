@@ -38,4 +38,4 @@ gentle	glib	odd	public	cooing
 sheet	accessible	word	enthusiastic	repeat
 selection	reaction	mute	alleged	jittery
 orange	sophisticated	income	mist	popcorn
-way
+way	stand

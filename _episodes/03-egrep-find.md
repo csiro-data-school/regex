@@ -282,6 +282,7 @@ goat
 {: .output}
 For the short word "oat", it was the preceeding tab character that the wildcard matched.
 
+
 One more concept to introduce before we get into some better examples of using this wildcard.
 
 
@@ -301,6 +302,7 @@ Symbol(s) | Effect
 {n,m} | Repeated between 'n' and 'm' times
 {n,} | Repeated at least 'n' times
 {,m} | Repeated at most 'm' times
+
 
 For example, what if we wanted to search for 'colour' but maybe it had US spelling?
 ~~~
@@ -327,6 +329,7 @@ sophisticated
 ~~~
 {: .output}
 
+
 > ## Greediness
 > 
 > Regular expression search patterns are considered "greedy". That is, when you use
@@ -335,6 +338,7 @@ sophisticated
 > E.g. '.\*', which mean "any character, zero or more times", will always match an entire line
 > without further specific context around it. 
 {: .callout}
+
 
 What if we wanted to match a date, and didn't know if the year would be 2 digits or 4?
 Our pattern for a date is "a digit, from 0-9, either one or two of them, then a forward slash,
@@ -364,4 +368,22 @@ echo "11/06/91 5/9/2018" | grep -E -o '[0-9]+/[0-9]+/[0-9]+'
 {: .output}
 
 
+
+> ## Try it
+> 
+> 1. Use 'grep -E -o' on wordplay1.txt to match *all* of any line that starts with a 'c'  
+> 2. Use 'grep -E -o' on wordplay1.txt to match the *first word* of lines starting with a 'c'  
+> 3. Modify previous answer to keep words 5 or 6 letters long only.
+> 4. Use 'grep -E -o' on wordplay1.txt to match both 'stand' and 'outstanding'
+> > ## Solution
+> >
+> > ~~~
+> > grep -E -o '^c.+' wordplay1.txt
+> > grep -E -o '^c[a-z]+' wordplay1.txt
+> > grep -E -o -w '^c[a-z]{4,5}' wordplay1.txt
+> > grep -E -o '(out)?stand(ing)?' wordplay1.txt
+> > ~~~
+> > {: .language-bash}
+> {: .solution}
+{: .challenge}
 
