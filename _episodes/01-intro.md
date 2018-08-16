@@ -19,11 +19,11 @@ keypoints:
 Have you ever wanted to pull specific information out of a file, where a straight search for
 a specific word or phrase wouldn't cut it? Perhaps all you knew was the general "shape" of
 what you were looking for.  For example, you know there's a date involved, not what the date is,
-but that it would *look* like a date- day/month/year. Or maybe there's some sort of tag on a line,
-or it's part of a specific file format, or it's part of a filename, structured a certain way.
+but that it would *look* like a date- day/month/year. Or maybe it's part of a specific 
+file format; you know the format's rules, but not the contents.
 
-Have you ever wanted to search a file for something, but only actually print out some different nearby
-information from the same line?
+Have you ever wanted to search a file for something, but only actually print out some *different*
+nearby information from the same line?
 
 Have you ever wanted to make bulk changes to a file, where a simple 'find & replace' wouldn't work?
 Perhaps you'd like to rename a list of samples, according to a rule based on their current names.
@@ -38,7 +38,7 @@ solutions.
 
 Heres an example.  We have a list of files in folders, each representing a sample/replicate in
 an experiment, with some sample details incorporated into the file names.
-We wish to transform this into a table listing samples, sample information, and file details.
+We wish to transform this into a table, listing samples, sample information, and file details.
 
 <img src="{{ page.root }}/fig/regexDemo1.png" alt="Regex demo1" />
 

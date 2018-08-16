@@ -14,6 +14,35 @@ keypoints:
 ---
 
 
+## Predefined character classes
+
+The Extended Regular Expression syntax has a number of predefined character groupings that may
+be written as a word, rather than a collection or range of characters.  
+For example, you may write `[[:digit:]]` instead of writing `[0-9]`
+
+Written as | Equivalent to
+----|----
+[[:digit:]] | [0-9]
+[[:alpha:]] | [a-zA-Z]
+[[:alnum:]] | [a-zA-Z0-9]
+[[:upper:]] | [A-Z]
+[[:lower:]] | [a-z]
+[[:space:]] | Spaces, tabs, sometimes new-lines
+[[:graph:]] | Any printable character other than space
+[[:punct:]] | Any printable character other than space or [a-zA-Z0-9]
+
+> ## Why?
+> 
+> Why would you write `[[:digit:]]` instead of writing `[0-9]`? Or `[[:upper:]]` instead 
+> of `[A-Z]`?  In general for our use there's little difference other than readability/style. 
+> The difference comes if you need to make things more universal. Our numbers and alphabet
+> aren't the only script in use around the world. So while `[0-9]` will always just be those
+> specific 10 characters, `[[:digit:]]` may have alternate numeric systems encoded.
+
+
+
+## Shorthand symbols
+
 
 
 
