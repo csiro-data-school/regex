@@ -382,13 +382,14 @@ echo "11/06/91 5/9/2018" | grep -E -o '[0-9]+/[0-9]+/[0-9]+'
 > 2. Use 'grep -E -o' on wordplay1.txt to match the *first word* of lines starting with a 'c'  
 > 3. Modify previous answer to keep words 5 or 6 letters long only.
 > 4. Use 'grep -E -o' on wordplay1.txt to match both 'stand' and 'outstanding'
+> 
 > > ## Solution
 > >
 > > ~~~
 > > grep -E -o '^c.+' wordplay1.txt
-> > grep -E -o '^c\[a-z\]+' wordplay1.txt
-> > grep -E -o -w '^c\[a-z\]\{4,5\}' wordplay1.txt
-> > grep -E -o '\(out\)?stand\(ing\)?' wordplay1.txt
+> > grep -E -o '^c[a-z]+' wordplay1.txt
+> > grep -E -o -w '^c[a-z]{4,5}' wordplay1.txt
+> > grep -E -o '(out)?stand(ing)?' wordplay1.txt
 > > ~~~
 > > {: .language-bash}
 > {: .solution}
