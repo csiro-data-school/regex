@@ -35,9 +35,11 @@ Written as | Equivalent to
 > 
 > Why would you write `[[:digit:]]` instead of writing `[0-9]`? Or `[[:upper:]]` instead 
 > of `[A-Z]`?  In general for our use there's little difference other than readability/style. 
-> The difference comes if you need to make things more universal. Our numbers and alphabet
-> aren't the only script in use around the world. So while `[0-9]` will always just be those
+> The difference comes if you need to make things more universal, as Arabic-numerals are not the
+> only number system in use around the world and the 26-letter English alphabet is not
+> the only writing system. So, for example, while `[0-9]` will always just be those
 > specific 10 characters, `[[:digit:]]` may have alternate numeric systems encoded.
+{: .callout}
 
 
 
