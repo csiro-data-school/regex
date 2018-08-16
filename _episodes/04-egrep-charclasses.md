@@ -26,7 +26,7 @@ keypoints:
 > 1. On some systems, pressing ctrl+v followed by tab, will insert a literal tab character.  
 > 2. On some systems, a literal tab could be copy and pasted in from a text editor.  
 > 3. A dollar sign in front of pattern can enable escape character interpretation in bash,
-> based on ANSI-C rules, where '\\t' is a tab. 
+> based on ANSI-C rules, where '\\t' is a tab.  
 > E.g. ``` echo $'|\t|' ```  OR  ``` grep -E $'\t' ```  
 > This last option is neatest, but beware other conflicting escape character interpretations
 > in this mode, meaning that to use '\\w' or '\\b' etc., you will need to double-escape

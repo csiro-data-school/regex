@@ -387,8 +387,8 @@ echo "11/06/91 5/9/2018" | grep -E -o '[0-9]+/[0-9]+/[0-9]+'
 > > ~~~
 > > grep -E -o '^c.+' wordplay1.txt
 > > grep -E -o '^c\[a-z\]+' wordplay1.txt
-> > grep -E -o -w '^c\[a-z\]{4,5}' wordplay1.txt
-> > grep -E -o '(out)?stand(ing)?' wordplay1.txt
+> > grep -E -o -w '^c\[a-z\]\{4,5\}' wordplay1.txt
+> > grep -E -o '\(out\)?stand\(ing\)?' wordplay1.txt
 > > ~~~
 > > {: .language-bash}
 > {: .solution}

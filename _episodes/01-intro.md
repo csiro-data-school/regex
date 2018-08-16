@@ -35,12 +35,27 @@ These are the situations that regular expressions make really quick and easy com
 solutions.
 
 
+
+Heres an example.  We have a list of files in folders, each representing a sample/replicate in
+an experiment, with some sample details incorporated into the file names.
+We wish to transform this into a table listing samples, sample information, and file details.
+
 <img src="{{ page.root }}/fig/regexDemo1.png" alt="Regex demo1" />
 
+There are numerous ways to do this, but most solutions would be multi-part, requiring cutting
+out different bits of information at a time.  
+Using a regular expression, this entire transformation can be done in a single command:
+
 ~~~
-'s/^(.+\/)(s([0-9]+)-R([0-9]+)_([0-9]+)h-(\w+).fasta)/Sample\3\tRep\4\t\5hours\t\6\t\2\t\1/'
+'s/^(.+\/)(s([0-9]+)-R([0-9]+)_([0-9]+)h-(\w+)\.fasta)/Sample\3\tRep\4\t\5hours\t\6\t\2\t\1/'
 ~~~
 {: .language-bash}
 
+This is a regular expression substitution, containing a pattern that matches each part of our 
+file names and another pattern that defines the rearrangement. A goal for the end of today is 
+to understand how this works and to be able to implement similar effects yourselves.
+
 
 ## What are regular expressions?
+
+
