@@ -1,7 +1,7 @@
 ---
 title: "Pattern matching with grep -E, part 1"
 teaching: 90
-exercises: 9
+exercises: 12
 questions:
 - "How do we write regexs to match complex patterns in files or output streams?"
 objectives:
@@ -329,24 +329,31 @@ sophisticated
 ~~~
 {: .output}
 
+> ## Pattern repetition
+> 
+> Note, it's probably clear from the previous example that, when specifying repetition of a 
+> pattern in this way, e.g. "match any letter from a to z, 12 or more times", 
+> it's the general ambiguous pattern concept which is repeated, not a specific matching case.
+> Hence we found 12 lots of "any letter" in a row, rather than "any letter" and then 12
+> repeats of that letter.
+{: .callout}
+
 
 > ## Greediness
 > 
 > Regular expression search patterns are considered "greedy". That is, when you use
 > '+' or '\*' or '{n,}', they will always match the *longest* possible string that 
 > still fits the pattern.  
-> E.g. '.\*', which mean "any character, zero or more times", will always match an entire line
+> E.g. '.\*', which means "any character, zero or more times", will always match an entire line
 > without further specific context around it. 
 {: .callout}
 
 
 What if we wanted to match a date, and didn't know if the year would be 2 digits or 4?
 Our pattern for a date is "a digit, from 0-9, either one or two of them, then a forward slash,
-then a digit, either one or two of them, then either 2 digits or 4 digits." 
-Here "either 2 or 4 digits" is achieved by saying "exactly two digits", then letting that 
-pattern be repeated either once or twice.
+then a digit, either one or two of them, then either 2 digits OR 4 digits." 
 ~~~
-echo "11/06/91 5/9/2018" | grep -E -o '[0-9]{1,2}/[0-9]{1,2}/([0-9]{2}){1,2}'
+echo "11/06/91  not/a/date  5/9/2018" | grep -E -o '[0-9]{1,2}/[0-9]{1,2}/([0-9]{2}|[0-9]{4})'
 ~~~
 {: .language-bash}
 ~~~
@@ -379,8 +386,8 @@ echo "11/06/91 5/9/2018" | grep -E -o '[0-9]+/[0-9]+/[0-9]+'
 > >
 > > ~~~
 > > grep -E -o '^c.+' wordplay1.txt
-> > grep -E -o '^c[a-z]+' wordplay1.txt
-> > grep -E -o -w '^c[a-z]{4,5}' wordplay1.txt
+> > grep -E -o '^c\[a-z\]+' wordplay1.txt
+> > grep -E -o -w '^c\[a-z\]{4,5}' wordplay1.txt
 > > grep -E -o '(out)?stand(ing)?' wordplay1.txt
 > > ~~~
 > > {: .language-bash}

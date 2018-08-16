@@ -1,0 +1,8 @@
+/path/to/my/data/folder1/s1-R1_6h-shade.fasta
+/path/to/my/data/folder1/s2-R1_6h-sun.fasta
+/path/to/my/data/folder1/s3-R1_24h-shade.fasta
+/path/to/my/data/folder1/s4-R1_24h-sun.fasta
+/path/to/my/data/folder2/s1-R2_6h-shade.fasta
+/path/to/my/data/folder2/s2-R2_6h-sun.fasta
+/path/to/my/data/folder2/s3-R2_24h-shade.fasta
+/path/to/my/data/folder2/s4-R2_24h-sun.fasta
