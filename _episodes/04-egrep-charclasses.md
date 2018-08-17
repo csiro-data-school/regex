@@ -50,6 +50,7 @@ most commonly do so from here on, is using the following shorthands, formed by "
 certain characters with a backslash.  For example '\\w' can be used to match to any 
 "word" character, which means any letter, number, or, for some reason, an underscore.  
 The shorthand symbols available are:
+
 Written as | Equivalent to
 ----|----
 \\w | "Word" character- [a-zA-Z0-9] OR a _ (underscore)
@@ -63,6 +64,7 @@ Written as | Equivalent to
 
 The following are commonly used within regex syntax (e.g. will work in Python or R),
 but **are not understood by grep or sed**:
+
 Written as | Equivalent to
 ----|----
 \\d | [0-9] A digit
