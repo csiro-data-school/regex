@@ -10,7 +10,8 @@ keypoints:
 - "grep in Extended Regex mode has a number of predefined character classes"
 - "Examples include:"
 - " ``` '[:alpha:]', '[:alnum:]', '[:digit:]', '[:upper:]', '[:lower:]', '[:punct:]', '[:space:]' ``` "
-- " ``` \\w \\W \\s \\S \\b \\B \\> \\< \\1 ``` "
+- " ``` \\w \\W \\s \\S \\b \\B \\> \\< ``` "
+- "You can refer back to an exact copy of a matched (group) using \\1, \\2, etc.."
 ---
 
 
@@ -69,9 +70,7 @@ Written as | Equivalent to
 ----|----
 \\d | [0-9] A digit
 \\D | [^0-9] Not a digit
-\\t | A tab character\* 
-
-\*(does work in some versions of sed)
+\\t | A tab character (does work in some version of sed)
 
 
 
@@ -131,6 +130,7 @@ hirdWor
 {: .output}
 
 
+
 > ## Tab characters
 > 
 > There are a few options for getting a tab character to work with grep or sed on a bash
@@ -146,3 +146,21 @@ hirdWor
 > E.g. for a word with tabs either side: ``` grep -E $'\t\\w+\t' ``` 
 {: .callout}
 
+
+
+ ## Try it
+> 
+> 1. Fixme
+> 
+> > ## Solution
+> >
+> > ~~~
+> > grep -E fixme wordplay1.txt
+> > ~~~
+> > {: .language-bash}
+> {: .solution}
+{: .challenge}
+
+
+
+## Back-references
