@@ -51,6 +51,8 @@ Using a regular expression, this entire transformation can be done in a single c
 ~~~
 {: .language-bash}
 
+It's ugly, but it works (regular expression catch-phrase?).  
+
 This is a regular expression substitution, containing a pattern that matches each part of our 
 file names and another pattern that defines the rearrangement. A goal for the end of today is 
 to understand how this works and to be able to implement similar effects yourselves.
@@ -58,4 +60,10 @@ to understand how this works and to be able to implement similar effects yoursel
 
 ## What are regular expressions?
 
+In short, a regular expression, or rational expression, or regex for short, is a sequence of 
+characters that act as a pattern for searching within text. What do we mean by pattern?  
 
+Consider a calendar date written down, say, 23/08/2018. We all recognise a date as being a 
+date when we see one written down this way? Why? Because there's a consistent pattern to it.
+A date written this way is: one or two digits, a forward slash, one or two digits, a forward
+slash, then either 2 digits or 4 digits. to be continued...
