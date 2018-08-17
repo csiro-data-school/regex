@@ -1,6 +1,6 @@
 ---
 title: "Shell wildcards - a type of regex"
-teaching: 60
+teaching: 30
 exercises: 9
 questions:
 - "Are regular expressions available in standard Unix commands?"
@@ -104,11 +104,11 @@ Remember: an entire '[*list*]' set will only match a *single* listed character a
 
 > ## Challenge
 > 
-> 1. Write an ls command to list .txt files for samples 2 to 5.  
-> 2. Write an ls command to list .txt files for samples X, Y and Z and sample A.  
-> 3. Write an ls command to list .txt files for samples denoted by a number followed by a letter
+> 3. Write an ls command to list .txt files for samples 2 to 5.  
+> 4. Write an ls command to list .txt files for samples X, Y and Z and sample A.  
+> 5. Write an ls command to list .txt files for samples denoted by a number followed by a letter
 > (e.g. sample1A).  
-> 4. Write an ls command to list .txt files for all sample names ending in a letter.  
+> 6. Write an ls command to list .txt files for all sample names ending in a letter.  
 >  
 > > ## Solution
 > >
@@ -142,7 +142,7 @@ E.g.
 
 > ## Challenge
 > 
-> Write an ls command to list .txt files for all samples *other* than those numbered 4 to 7 and 9.
+> 7. Write an ls command to list .txt files for all samples *other* than those numbered 4 to 7 and 9.
 >  
 > > ## Solution
 > >
@@ -220,8 +220,8 @@ of listing longer options in a this-OR-that fashion will be visited again in pro
 
 > ## Challenge
 > 
-> 1. Write an ls command to list files for samples 8 to 13 and CD.
-> 2. Write an ls command to list just .csv and .tab files for samples 11 and CD.
+> 8. Write an ls command to list files for samples 8 to 13 and CD.
+> 9. Write an ls command to list just .csv and .tab files for samples 11 and CD.
 >  
 > > ## Solution
 > >

@@ -1,7 +1,7 @@
 ---
 title: "Pattern matching with grep -E, part 1"
-teaching: 90
-exercises: 12
+teaching: 60
+exercises: 13
 questions:
 - "How do we write regexs to match complex patterns in files or output streams?"
 objectives:
@@ -23,7 +23,7 @@ keypoints:
 
 
 You may have used the command 'grep' before, which allows you to search for a matching string.
-It may be given a file name, to mak it search within a file:
+It may be given a file name, to mak it search within a file:  
 ~~~
 grep 'react' wordplay1.txt
 ~~~
@@ -46,14 +46,14 @@ Andrew
 {: .output}
 In this example, the '-o' flag was used to make grep print only the matches it finds, 
 rather than whole matching lines. This will be a handy option when we start testing 
-more ambiguous search patterns later.
+more ambiguous search patterns later.  
 
 
 For the following lessons, we'll be making use of grep with a '-E' flag, 
 which enables Extended Regular Expression (ERE) mode for searching regex patterns.
 On some systems, an aliased command 'egrep' exists. The regular expression syntax
 of 'grep -E' is the same as that of 'sed -E', which we'll be using for "find & replace"
-commands later, and basically the same as most other implementations of regular expressions.
+commands later, and basically the same as most other implementations of regular expressions.  
 
 
 
@@ -73,7 +73,7 @@ exclusive       color   harbor  boat    bedroom
 {: .output}
 
 Round brackets may be used to group terms together. This grouping has multiple uses, as you'll
-see as we continue, but one is to group OR options together.  E.g.:
+see as we continue, but one is to group OR options together.  E.g.:  
 ~~~
 grep -E 'b(oat|olt|ell)' wordplay1.txt 
 ~~~
@@ -96,7 +96,9 @@ BC
 {: .output}
 Using '-o' to print matching part only, why wasn't the 'A' included in result?
 The search pattern asked for either a A or a B which was followed by a C.
-Only the B met this criteria.
+Only the B met this criteria.  
+
+
 
 > ## Try it
 > 
@@ -171,12 +173,14 @@ echo "1952 1986 2003 1995 2018" | grep -E -o '20[0-9][0-9]'
 ~~~
 {: .output}
 
+
+
 > ## Try it
 > 
-> 1. Write a grep -E command to search wordplay1.txt for 4-letter words ending in 'oat'
-> 2. What if you didn't know if the words started with lower case or capitol letters?
-> 3. What if *any* of the letters could be upper case or lower case?
-> 4. Write an alternative working answer to 3.
+> 5. Write a grep -E command to search wordplay1.txt for 4-letter words ending in 'oat'
+> 6. What if you didn't know if the words started with lower case or capitol letters?
+> 7. What if *any* of the letters could be upper case or lower case?
+> 8. Write an alternative working answer to 3.
 > 
 > > ## Solution
 > >
@@ -191,6 +195,7 @@ echo "1952 1986 2003 1995 2018" | grep -E -o '20[0-9][0-9]'
 > > {: .language-bash}
 > {: .solution}
 {: .challenge}
+
 
 
 When used within square brackets, a '^' means "NOT". 
@@ -209,9 +214,11 @@ lag
 ~~~
 {: .output}
 
+
+
 > ## Try it
 > 
-> 1. Modify your 'oat' word finder to find any 4-letter 'oat' words other than 'boat' and 'goat'
+> 9. Modify your 'oat' word finder to find any 4-letter 'oat' words other than 'boat' and 'goat'
 > 
 > > ## Solution
 > >
@@ -329,6 +336,8 @@ sophisticated
 ~~~
 {: .output}
 
+
+
 > ## Pattern repetition
 > 
 > Note, it's probably clear from the previous example that, when specifying repetition of a 
@@ -339,6 +348,7 @@ sophisticated
 {: .callout}
 
 
+
 > ## Greediness
 > 
 > Regular expression search patterns are considered "greedy". That is, when you use
@@ -347,6 +357,7 @@ sophisticated
 > E.g. '.\*', which means "any character, zero or more times", will always match an entire line
 > without further specific context around it. 
 {: .callout}
+
 
 
 What if we wanted to match a date, and didn't know if the year would be 2 digits or 4?
@@ -378,10 +389,10 @@ echo "11/06/91 5/9/2018" | grep -E -o '[0-9]+/[0-9]+/[0-9]+'
 
 > ## Try it
 > 
-> 1. Use 'grep -E -o' on wordplay1.txt to match *all* of any line that starts with a 'c'  
-> 2. Use 'grep -E -o' on wordplay1.txt to match the *first word* of lines starting with a 'c'  
-> 3. Modify previous answer to keep words 5 or 6 letters long only.
-> 4. Use 'grep -E -o' on wordplay1.txt to match both 'stand' and 'outstanding'
+> 10. Use 'grep -E -o' on wordplay1.txt to match *all* of any line that starts with a 'c'  
+> 11. Use 'grep -E -o' on wordplay1.txt to match the *first word* of lines starting with a 'c'  
+> 12. Modify previous answer to keep words 5 or 6 letters long only.
+> 13. Use 'grep -E -o' on wordplay1.txt to match both 'stand' and 'outstanding'
 > 
 > > ## Solution
 > >
