@@ -53,7 +53,7 @@ The shorthand symbols available are:
 
 Written as | Equivalent to
 ----|----
-\\w | "Word" character- [a-zA-Z0-9] OR a _ (underscore)
+\\w | "Word" character, [a-zA-Z0-9] OR a _ (underscore)
 \\W | [^\\w] Inverse of \\w, any non-"word" character
 \\s | Spaces, tabs, in some contexts new-lines
 \\S | [^\\s] Inverse of \\s, any non-space character
@@ -70,6 +70,7 @@ Written as | Equivalent to
 \\d | [0-9] A digit
 \\D | [^0-9] Not a digit
 \\t | A tab character\* 
+
 \*(does work in some versions of sed)
 
 
