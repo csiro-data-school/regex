@@ -10,7 +10,7 @@ keypoints:
 - "grep in Extended Regex mode has a number of predefined character classes"
 - "Examples include:"
 - " ``` '[:alpha:]', '[:alnum:]', '[:digit:]', '[:upper:]', '[:lower:]', '[:punct:]', '[:space:]' ``` "
-- " ``` \\w \\W \\b \\B \\> \\< \\1 ``` "
+- " ``` \\w \\W \\s \\S \\b \\B \\> \\< \\1 ``` "
 ---
 
 
@@ -27,14 +27,14 @@ Written as | Equivalent to
 [[:alnum:]] | [a-zA-Z0-9]
 [[:upper:]] | [A-Z]
 [[:lower:]] | [a-z]
-[[:space:]] | Spaces, tabs, sometimes new-lines
+[[:space:]] | Spaces, tabs, in some contexts new-lines
 [[:graph:]] | Any printable character other than space
 [[:punct:]] | Any printable character other than space or [a-zA-Z0-9]
 
 > ## Why?
 > 
 > Why would you write `[[:digit:]]` instead of writing `[0-9]`? Or `[[:upper:]]` instead 
-> of `[A-Z]`?  In general for our use there's little difference other than readability/style. 
+> of `[A-Z]`?  In general, for our use, there's little difference other than readability/style. 
 > The difference comes if you need to make things more universal, as Arabic-numerals are not the
 > only number system in use around the world and the 26-letter English alphabet is not
 > the only writing system. So, for example, while `[0-9]` will always just be those
@@ -43,17 +43,95 @@ Written as | Equivalent to
 
 
 
-## Shorthand symbols
+## Regex shorthand escape symbols
+
+The other way you may refer to predefined character classes, and the way you will likely
+most commonly do so from here on, is using the following shorthands, formed by "escaping"
+certain characters with a backslash.  For example '\\w' can be used to match to any 
+"word" character, which means any letter, number, or, for some reason, an underscore.  
+The shorthand symbols available are:
+Written as | Equivalent to
+----|----
+\\w | "Word" character- [a-zA-Z0-9] OR a _ (underscore)
+\\W | [^\\w] Inverse of \\w, any non-"word" character
+\\s | Spaces, tabs, in some contexts new-lines
+\\S | [^\\s] Inverse of \\s, any non-space character
+\\b | Boundary between "words" and "spaces" (0-length)
+\\B | [^\\b] In the middle of a "word" or multiple "spaces" (0-length)
+\\< | Boundary at *start* of "word" between "words" and "spaces" (0-length)
+\\> | Boundary at *end* of "word" between "words" and "spaces" (0-length)
+
+The following are commonly used within regex syntax (e.g. will work in Python or R),
+but **are not understood by grep or sed**:
+Written as | Equivalent to
+----|----
+\\d | [0-9] A digit
+\\D | [^0-9] Not a digit
+\\t | A tab character\* 
+\*(does work in some versions of sed)
 
 
+
+Here are some examples.  
+The first two words (start of line, word, space(s), word):
+~~~
+echo 'word1 word_2  thirdWord' | grep -E -o '^\w+\s+\w+'
+~~~
+{: .language-bash}
+~~~
+word1 word_2
+~~~
+{: .output}
+
+A word with spaces on both ends:
+~~~
+echo 'word1 word_2  thirdWord!?' | grep -E -o '\s\w+\s'
+~~~
+{: .language-bash}
+~~~
+ word_2 
+~~~
+{: .output}
+
+Every set of consecutive non-space characters:
+~~~
+echo 'word1 word_2  thirdWord!?' | grep -E -o '\S+'
+~~~
+{: .language-bash}
+~~~
+word1
+word_2
+thirdWord!?
+~~~
+{: .output}
+
+Everything up to the boundary of the last word:
+~~~
+echo 'word1 word_2  thirdWord!?' | grep -E -o '.+\<'
+~~~
+{: .language-bash}
+~~~
+word1 word_2  
+~~~
+{: .output}
+
+The middle characters of each word (bounded by not-a-word-boundary):
+~~~
+echo 'word1 word_2  thirdWord!?' | grep -E -o '\B\w+\B'
+~~~
+{: .language-bash}
+~~~
+ord
+ord_
+hirdWor
+~~~
+{: .output}
 
 
 > ## Tab characters
 > 
-> Another term commonly useful within regexs is a tab character, represented by '\\t' in most
-> coding languages. Unfortunately '\\t' is not natively recognised within grep or sed.
-> There are a few options for getting a tab character to work (if a space or word boundary
-> will not be specific enough):  
+> There are a few options for getting a tab character to work with grep or sed on a bash
+> command line (if a space or word boundary will not be specific enough):  
 > 1. On some systems, pressing ctrl+v followed by tab, will insert a literal tab character.  
 > 2. On some systems, a literal tab could be copy and pasted in from a text editor.  
 > 3. A dollar sign in front of pattern can enable escape character interpretation in bash,
