@@ -7,9 +7,9 @@ questions:
 objectives:
 - "Learn regex substitutions using sed"
 keypoints:
-- "sed -E 's/pattern/replacement/'"
-- "'s/pattern/replacement/g' <- enables Greedy, replace-all mode."
-- "Use grouping '\( \)' in pattern and back-reference '\\1' in replacement..."
+- " ``` sed -E 's/pattern/replacement/' ``` "
+- " ``` 's/pattern/replacement/g' ``` - enables Greedy, replace-all mode."
+- "Use grouping () in pattern and back-reference \\1 in replacement..."
 - "... to rearrange or recontextualise parts of matched input."
 ---
 
