@@ -61,9 +61,26 @@ to understand how this works and to be able to implement similar effects yoursel
 ## What are regular expressions?
 
 In short, a regular expression, or rational expression, or regex for short, is a sequence of 
-characters that act as a pattern for searching within text. What do we mean by pattern?  
+characters that act as a pattern for searching within text. So, what do we mean by pattern?  
 
 Consider a calendar date written down, say, 23/08/2018. We all recognise a date as being a 
-date when we see one written down this way? Why? Because there's a consistent pattern to it.
-A date written this way is: one or two digits, a forward slash, one or two digits, a forward
-slash, then either 2 digits or 4 digits. to be continued...
+date when we see one written down this way. Why? Because there's a consistent pattern to it.
+We could describe the pattern of a date written this way as: one or two digits, a forward slash, 
+one or two digits, a forward slash, then either 2 digits or 4 digits. Using that pattern of
+what a date looks like, our eyes could scan a page of text and pick out other dates. 
+
+Regular expressions are a formalisation of such patterns into a consistent syntax, making use
+of metacharacters with specific meaning, such that we can guide a computer to search text in
+a way that is as specific or as ambiguous as required. It's a very powerful tool, being able
+to search text for patterns instead of just exact words. Taken further, it also allows for
+complex find & replaces, where the replacing is also following a pattern described with the
+same syntax.  
+
+
+
+There have been numerous implementations of regular expressions, but the major common
+implementations available now all follow a mostly-consistent syntax, which we'll be 
+learning today. So, for example, once you learn this regex syntax, you'll then be able
+to use it within certain Bash command line utilities, or make use of it within Python
+and/or R.
+
