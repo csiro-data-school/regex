@@ -23,7 +23,7 @@ keypoints:
 
 
 You may have used the command 'grep' before, which allows you to search for a matching string.
-It may be given a file name, to mak it search within a file:  
+It may be given a file name, to make it search within a file:  
 ~~~
 grep 'react' wordplay1.txt
 ~~~
