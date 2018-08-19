@@ -36,9 +36,10 @@ solutions.
 
 
 
-Heres an example.  We have a list of files in folders, each representing a sample/replicate in
+Here's an example.  We have a list of files in folders, each representing a sample/replicate in
 an experiment, with some sample details incorporated into the file names.
-We wish to transform this into a table, listing samples, sample information, and file details.
+We wish to automatically transform this into a table, listing samples, sample information, 
+and file details.
 
 <img src="{{ page.root }}/fig/regexDemo1.png" alt="Regex demo1" />
 
@@ -51,7 +52,7 @@ Using a regular expression, this entire transformation can be done in a single c
 ~~~
 {: .language-bash}
 
-It's ugly, but it works (regular expression catch-phrase?).  
+It's ugly, but it works (which might be the regular expression catch-phrase).  
 
 This is a regular expression substitution, containing a pattern that matches each part of our 
 file names and another pattern that defines the rearrangement. A goal for the end of today is 
@@ -67,10 +68,10 @@ Consider a calendar date written down, say, 23/08/2018. We all recognise a date 
 date when we see one written down this way. Why? Because there's a consistent pattern to it.
 We could describe the pattern of a date written this way as: one or two digits, a forward slash, 
 one or two digits, a forward slash, then either 2 digits or 4 digits. Using that pattern of
-what a date looks like, our eyes could scan a page of text and pick out other dates. 
+what a date looks like, our eyes can scan a page of text and pick out other dates. 
 
 Regular expressions are a formalisation of such patterns into a consistent syntax, making use
-of metacharacters with specific meaning, such that we can guide a computer to search text in
+of metacharacters of certain meaning, such that we can guide a computer to search text in
 a way that is as specific or as ambiguous as required. It's a very powerful tool, being able
 to search text for patterns instead of just exact words. Taken further, it also allows for
 complex find & replaces, where the replacing is also following a pattern described with the
@@ -79,8 +80,8 @@ same syntax.
 
 
 There have been numerous implementations of regular expressions, but the major common
-implementations available now all follow a mostly-consistent syntax, which we'll be 
+implementations available today all follow a mostly-consistent syntax, which we'll be 
 learning today. So, for example, once you learn this regex syntax, you'll then be able
-to use it within certain Bash command line utilities, or make use of it within Python
+to use it within certain Bash command line utilities, *or* make use of it within Python
 and/or R.
 
