@@ -12,12 +12,12 @@ keypoints:
 - "Use grouping () in pattern and back-reference \\1 in replacement..."
 - "... to rearrange or recontextualise parts of the matched input."
 - "Tips for writing complex substitutions:"
-- " 1\. Start with a complete real example pasted as your pattern."
-- " 2\. Escape (\\) any forward slashes, literal brackets, etc., as necessary."
-- " 3\. Circle the parts to retain, with round brackets."
-- " 4\. Write your replacement rules, using back-references."
-- " 5\. Substitution should now work for your specific real example."
-- " 6\. Abstract pattern with wildcards, etc., to make ambiguous enough for all required cases."
+- "1- Start with a complete real example pasted as your pattern."
+- "2- Escape (\\) any forward slashes, literal brackets, etc., as necessary."
+- "3- Circle the parts to retain, with round brackets."
+- "4- Write your replacement rules, using back-references."
+- "5- Substitution should now work for your specific real example."
+- "6- Abstract pattern with wildcards, etc., to make ambiguous enough for all required cases."
 ---
 
 ## Regex substitution syntax
@@ -241,7 +241,7 @@ two one
 > 
 > Complete the following, to convert dates in namesndates.txt from dd/mm/yyyy format, into
 > yymmdd format.  E.g. change 23/08/2012 into 120823.  
-> ``` sed -E 's; ; ;' namesndates.txt
+> ``` sed -E 's; ; ;' namesndates.txt ```
 > 
 > > ## Solution
 > >
