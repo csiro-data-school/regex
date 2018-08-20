@@ -17,6 +17,9 @@ This tutorial introduces regular expressions through:
 > Basic Vim usage  
 > Basic Python usage  
 > Basic R usage  
+>  
+> Participants will need a copy of all files in the data directory of this course's repository 
+> and to be on a bash command line, cd’d to location of files.
 {: .prereq}
 
 {% include links.md %}

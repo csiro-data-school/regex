@@ -82,6 +82,7 @@ Written as | Equivalent to
 \\d | [0-9] A digit
 \\D | [^0-9] Not a digit
 \\t | A tab character (does work in some version of sed, test yours)
+\\n | A newline, if program supports multi-line matching
 
 
 
@@ -142,10 +143,36 @@ hirdWor
 
 
 
+## Try it
+> 
+> 1. Use 'grep -E -o' on wordplay1.txt to print the first 2 words of any line using  
+>   a. [[:alpha:]] and [[:space:]]  
+>   b. \\w and \\s  
+>   c. \\S and \\s  
+> 2. Use 'grep -E -o', with \\w and \\b, on wordplay1.txt to print a word that 
+> starts with 'p' and ends with 'g'.  
+> 3. Use 'grep -E', with \\w and \\<, on wordplay1.txt to highlight the first 
+> letter of every word.  
+> 
+> > ## Solution
+> >
+> > ~~~
+> > grep -E -o '^[[:alpha:]]+[[:space:]]+[[:alpha:]]+' wordplay1.txt 
+> > grep -E -o '^\w+\s+\w+' wordplay1.txt  
+> > grep -E -o '^\S+\s+\S+' wordplay1.txt
+> > grep -E -o '\bp\w+g\b' wordplay1.txt
+> > grep -E '\<\w' wordplay1.txt
+> > ~~~
+> > {: .language-bash}
+> {: .solution}
+{: .challenge}
+
+
+
 > ## Tab characters
 > 
 > There are a few options for getting a tab character to work with grep or sed on a bash
-> command line (if a space or word boundary will not be specific enough):  
+> command line (if a space '\\s' or word boundary anchor will not be specific enough):  
 > 1. On some systems, pressing ctrl+v followed by tab, will insert a literal tab character.  
 > 2. On some systems, a literal tab could be copy and pasted in from a text editor.  
 > 3. A dollar sign in front of pattern can enable escape character interpretation in bash,
@@ -156,21 +183,6 @@ hirdWor
 > them, with two slashes.  
 > E.g. for a word with tabs either side: ``` grep -E $'\t\\w+\t' ``` 
 {: .callout}
-
-
-
-## Try it
-> 
-> 1. Fixme
-> 
-> > ## Solution
-> >
-> > ~~~
-> > grep -E fixme wordplay1.txt
-> > ~~~
-> > {: .language-bash}
-> {: .solution}
-{: .challenge}
 
 
 
@@ -228,13 +240,16 @@ Our pattern matched to three letters, then to those same three letters repeated 
 
 ## Try it
 > 
-> 1. Grep wordplay1.txt to print the only line that contains the same word repeated twice.
-> Hint: This may be a good place to try the '\\b' word-boundary match.
+> 4. Grep 'wordplay1.txt' to print the only line that contains the same word repeated twice.
+> Hint: You may need the '\\b' word-boundary match.
+> 4. Grep 'namesndates.txt' to print the name of a person whose firstname and surname start
+> with the same letter.
 > 
 > > ## Solution
 > >
 > > ~~~
 > > grep -E '\b(\w+)\b.+\b\1\b' wordplay1.txt
+> > grep -E -o '^(\w)\w+\s\1\w+' namesndates.txt
 > > ~~~
 > > {: .language-bash}
 > {: .solution}
