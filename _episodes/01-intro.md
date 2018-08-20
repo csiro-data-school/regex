@@ -36,8 +36,8 @@ solutions.
 
 
 
-Here's an example.  We have a list of files in folders, each representing a sample/replicate in
-an experiment, with some sample details incorporated into the file names.
+Here's an example.  We have a list of files in folders, each representing a sample and replicate 
+in an experiment, with some sample details incorporated into the file names.
 We wish to automatically transform this into a table, listing samples, sample information, 
 and file details.
 
@@ -64,7 +64,7 @@ to understand how this works and to be able to implement similar effects yoursel
 In short, a regular expression, or rational expression, or regex for short, is a sequence of 
 characters that act as a pattern for searching within text. So, what do we mean by pattern?  
 
-Consider a calendar date written down, say, 23/08/2018. We all recognise a date as being a 
+Consider again a calendar date written down, say, 23/08/2018. We all recognise a date as being a 
 date when we see one written down this way. Why? Because there's a consistent pattern to it.
 We could describe the pattern of a date written this way as: one or two digits, a forward slash, 
 one or two digits, a forward slash, then either 2 digits or 4 digits. Using that pattern of

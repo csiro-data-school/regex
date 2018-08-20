@@ -242,14 +242,16 @@ Our pattern matched to three letters, then to those same three letters repeated 
 > 
 > 4. Grep 'wordplay1.txt' to print the only line that contains the same word repeated twice.
 > Hint: You may need the '\\b' word-boundary match.
-> 4. Grep 'namesndates.txt' to print the name of a person whose firstname and surname start
+> 5. Grep 'namesndates.txt' to print the name of a person whose firstname and surname start
 > with the same letter.
+> 6. Grep 'namesndates.txt' to print a date where the month and the day are the same number.
 > 
 > > ## Solution
 > >
 > > ~~~
 > > grep -E '\b(\w+)\b.+\b\1\b' wordplay1.txt
 > > grep -E -o '^(\w)\w+\s\1\w+' namesndates.txt
+> > grep -E -o '([0-9]{2})/\1/[0-9]{4}' namesndates.txt
 > > ~~~
 > > {: .language-bash}
 > {: .solution}

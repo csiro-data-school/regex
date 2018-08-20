@@ -11,6 +11,13 @@ keypoints:
 - " ``` 's/pattern/replacement/g' ``` - enables Greedy, replace-all mode."
 - "Use grouping () in pattern and back-reference \\1 in replacement..."
 - "... to rearrange or recontextualise parts of the matched input."
+- "Tips for writing complex substitutions:"
+- "1. Start with a complete real example pasted as your pattern."
+- "2. Escape (\\) any forward slashes, literal brackets, etc., as necessary."
+- "3. Circle the parts to retain, with round brackets."
+- "4. Write your replacement rules, using back-references."
+- "5. Substitution should now work for your specific real example."
+- "6. Abstract pattern with wildcards, etc., to make ambiguous enough for all required cases."
 ---
 
 ## Regex substitution syntax
@@ -314,7 +321,9 @@ Tips turning longer complex strings into regular expression substitutions:
 2. Add escape back slashes to any forward slashes, literal brackets, etc., as necessary.
 3. "Circle" the parts of the string you'd like to separately retain, with round brackets.
 4. Write out your replacement pattern, using back-reference to what you circled.
-5. Finally, start abstracting your search pattern, replacing parts of your example string with 
+5. At this stage, the substitution should work, but only for the specific real example string
+that you've started with.
+6. Finally, start abstracting your search pattern, replacing parts of your example string with 
 wild-cards or character-classes as needed, to strike the balance between specificity and
 ambiguity required to match all that you want and not all that you don't want.
 
