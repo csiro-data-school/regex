@@ -1,7 +1,7 @@
 ---
 title: "Pattern matching with grep -E, part 2"
-teaching: 60
-exercises: 9
+teaching: 30
+exercises: 20
 questions:
 - "How do we use predefined character classes for more complex search patterns?"
 objectives:

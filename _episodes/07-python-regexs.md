@@ -1,7 +1,7 @@
 ---
 title: "Python regular expressions"
 teaching: 10
-exercises: 1
+exercises: 0
 questions:
 - "How can we invoke regular expressions using Python?"
 objectives:

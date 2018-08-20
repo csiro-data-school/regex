@@ -1,7 +1,7 @@
 ---
 title: "Pattern matching with grep -E, part 1"
-teaching: 60
-exercises: 16
+teaching: 45
+exercises: 45
 questions:
 - "How do we write regexs to match complex patterns in files or output streams?"
 objectives:

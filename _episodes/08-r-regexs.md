@@ -9,7 +9,7 @@ objectives:
 keypoints:
 - "Regular expressions through R:"
 - "```gsub('pattern', 'replacement', \"string\")```"
-- "Need to double escape '\\' any back slashes."
+- "Need to double escape ```\\``` any back slashes."
 ---
 
 ~~~

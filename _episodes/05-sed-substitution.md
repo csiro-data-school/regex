@@ -1,7 +1,7 @@
 ---
 title: "Find... and replace! With sed."
-teaching: 90
-exercises: 11
+teaching: 30
+exercises: 75
 questions:
 - "How do we find and replace content using regex patterns?"
 objectives:

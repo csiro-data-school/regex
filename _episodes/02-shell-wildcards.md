@@ -1,7 +1,7 @@
 ---
 title: "Shell wildcards - a type of regex"
-teaching: 30
-exercises: 9
+teaching: 20
+exercises: 20
 questions:
 - "Are regular expressions available in standard Unix commands?"
 objectives:
