@@ -252,7 +252,7 @@ two one
 > 9. DNA and RNA sequences are often represented in the "FASTA" format, which looks like:
 > 
 > > ~~~
-> > \>seqID
+> > >seqID
 > > ATCGTACGTAGCTACGT
 > > ~~~
 > > {: .output} 
@@ -284,7 +284,7 @@ two one
 
 > ## Try it - Fixing a file
 > 
-> 10. Have another look at 'namesndates.txt' (```cat namesndates.txt```)
+> Have another look at 'namesndates.txt' (```cat namesndates.txt```)
 >
 > A number of typos and inconsistencies were made when adding rows to 'namesndates.txt':
 > 1. One row has a name written as "surname, firstname", instead of "firstname surname".
