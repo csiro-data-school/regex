@@ -291,6 +291,7 @@ two one
 > 2. One row has a date written in "dd-mm-yyyy" format instead of "dd/mm/yyyy" format.
 > 3. One row is comma-separated, while the rest are tab-separated.
 > 4. Some rows have multiple spaces, or a mix of tabs and spaces, in place of just single tabs.
+> (```cat -T namesndates.txt``` can help distinguish tabs from spaces)
 >
 > Using multiple piped sed substitutions, can you correct all of these mistakes?
 > 

@@ -9,11 +9,11 @@ objectives:
 - "'*', '?', '[ ]', '[! ]' and '{ }'"
 keypoints:
 - "Use of wildcards in the Unix shell is a simple form of regular expressions."
-- "'*' matches zero or more characters"
-- "'?' matches exactly one character"
-- "'[ ]' matches a character from a list or range of contained options"
-- "'[! ]' matches a character NOT in a list or range of contained options"
-- "'{ }' expands to produce forms of all listed contained options"
+- "```*``` matches zero or more characters"
+- "```?``` matches exactly one character"
+- "```[ ]``` matches a character from a list or range of contained options"
+- "```[! ]``` matches a character NOT in a list or range of contained options"
+- "```{ }``` expands to produce forms of all listed contained options"
 ---
 
 While using a Unix shell, you may have already become familiar with a simple form of regular 

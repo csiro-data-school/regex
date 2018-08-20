@@ -7,7 +7,11 @@ questions:
 objectives:
 - "Introduce regex capabilities in Python"
 keypoints:
-- "Regular expression through Python: 'import re'"
+- "Regular expressions through Python: "
+- "```import re```"
+- "```match = re.search(r'pattern', 'string')```"
+- "or"
+- "```re.sub( r'pattern', r'replacement', 'string' )```"
 ---
 
 ~~~
@@ -24,7 +28,6 @@ if match:
 
 ~~~
 import re
-re.match(r'\d+', 'word 123 word')
 re.sub( r'(\w+)\s+(\d+)\s+(\w+)', r'\2-\1-\3', 'Four 123 Five' )
 ~~~
 {: .language-python}

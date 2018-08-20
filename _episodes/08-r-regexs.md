@@ -1,13 +1,15 @@
 ---
 title: "R regular expressions"
 teaching: 10
-exercises: 1
+exercises: 0
 questions:
 - "How can we invoke regular expressions using R?"
 objectives:
 - "Introduce regex capabilities in R"
 keypoints:
-- "Regular expressions through R: 'gsub( )'"
+- "Regular expressions through R:"
+- "```gsub('pattern', 'replacement', "string")```"
+- "Need to double escape '\\' any back slashes."
 ---
 
 ~~~
