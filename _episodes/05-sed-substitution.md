@@ -13,7 +13,7 @@ keypoints:
 - "... to rearrange or recontextualise parts of the matched input."
 - "Tips for writing complex substitutions:"
 - "1- Start with a complete real example pasted as your pattern."
-- "2- Escape '\\' any forward slashes, literal brackets, etc., as necessary."
+- "2- Escape '&#92;' any forward slashes, literal brackets, etc., as necessary."
 - "3- Circle the parts to retain, with round brackets."
 - "4- Write your replacement rules, using back-references."
 - "5- Substitution should now work for your specific real example."
