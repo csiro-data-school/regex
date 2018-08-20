@@ -179,7 +179,7 @@ echo "1952 1986 2003 1995 2018" | grep -E -o '20[0-9][0-9]'
 > 5. Write a grep -E command to search wordplay1.txt for 4-letter words ending in 'oat'
 > 6. What if you didn't know if the words started with lower case or capitol letters?
 > 7. What if *any* of the letters could be upper case or lower case?
-> 8. Write an alternative working answer to 3.
+> 8. Write an alternative working answer to 7.
 > 
 > > ## Solution
 > >
