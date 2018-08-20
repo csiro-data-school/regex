@@ -124,7 +124,7 @@ helloAndrew
 
 
 
-## Try it
+> ## Try it
 > 
 > 1. Fixme
 > 
@@ -184,7 +184,7 @@ two one
 
 
 
-## Try it
+> ## Try it
 > 
 > 1. Fixme
 > 
@@ -215,18 +215,17 @@ two one
 
 
 
-## Try it
+> ## Try it
 > 
-> 1. Fixme
-> 
+> 1. Complete the following, to convert dates in namesndates.txt from dd/mm/yyyy format, into
+> yymmdd format.  E.g. change 23/08/2012 into 120823.  
+> ``` sed -E 's; ; ;' namesndates.txt
 > > ## Solution
 > >
 > > ~~~
-> > sed
+> > sed -E 's;([0-9]{2})/([0-9]{2})/[0-9]{2}([0-9]{2});\3\2\1;' namesndates.txt
 > > ~~~
 > > {: .language-bash}
 > {: .solution}
 {: .challenge}
-
-
 

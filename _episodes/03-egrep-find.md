@@ -1,27 +1,27 @@
 ---
 title: "Pattern matching with grep -E, part 1"
 teaching: 60
-exercises: 13
+exercises: 16
 questions:
 - "How do we write regexs to match complex patterns in files or output streams?"
 objectives:
 - "Learn the basic syntax of Extended Regular Expressions, using grep -E"
 keypoints:
 - "grep in Extended Regex mode (or egrep) allows complex pattern matching in files/streams."
-- "'&#x7c;' acts as an OR between options"
-- "'( )' allows grouping, e.g. for OR modifier, with quantifiers, etc.."
-- "'[ ]' matches a character from a list or range of contained options"
-- "'[^ ]' matches a character NOT in a list or range of contained options"
-- "'^' at the start of a regex means match at start of line"
-- "'$' at the end of a regex means match at end of line"
-- "'.' is the match-all (any single character) wildcard"
-- "'?' quantifies previous character or group as occuring zero or one time"
-- "'*' quantifies previous character or group as occuring zero or more times"
-- "'+' quantifies previous character or group as occuring one or more times"
-- "'{n,m}' quantifies previous character or group as occuring between n and m times"
+- "```|``` acts as an OR between options"
+- "```( )``` allows grouping, e.g. for OR modifier, with quantifiers, etc.."
+- "```[ ]``` matches a character from a list or range of contained options"
+- "```[^ ]``` matches a character NOT in a list or range of contained options"
+- "```^``` at the start of a regex means match at start of line"
+- "```$``` at the end of a regex means match at end of line"
+- "```.``` is the match-all (any single character) wildcard"
+- "```?``` quantifies previous character or group as occuring zero or one time"
+- "```*``` quantifies previous character or group as occuring zero or more times"
+- "```+``` quantifies previous character or group as occuring one or more times"
+- "```{n,m}``` quantifies previous character or group as occuring between n and m times"
 ---
 
-
+&#x7c;
 You may have used the command 'grep' before, which allows you to search for a matching string.
 It may be given a file name, to make it search within a file:  
 ~~~
@@ -360,6 +360,27 @@ sophisticated
 
 
 
+> ## Try it
+> 
+> 10. Use 'grep -E -o' on wordplay1.txt to match *all* of any line that starts with a 'c'  
+> 11. Use 'grep -E -o' on wordplay1.txt to match the *first word* of lines starting with a 'c'  
+> 12. Modify previous answer to keep words 5 or 6 letters long only.
+> 13. Use 'grep -E -o' on wordplay1.txt to match both 'stand' and 'outstanding'
+> 
+> > ## Solution
+> >
+> > ~~~
+> > grep -E -o '^c.+' wordplay1.txt
+> > grep -E -o '^c[a-z]+' wordplay1.txt
+> > grep -E -o -w '^c[a-z]{4,5}' wordplay1.txt
+> > grep -E -o '(out)?stand(ing)?' wordplay1.txt
+> > ~~~
+> > {: .language-bash}
+> {: .solution}
+{: .challenge}
+
+
+
 What if we wanted to match a date, and didn't know if the year would be 2 digits or 4?
 Our pattern for a date is "a digit, from 0-9, either one or two of them, then a forward slash,
 then a digit, either one or two of them, then either 2 digits OR 4 digits." 
@@ -389,18 +410,18 @@ echo "11/06/91 5/9/2018" | grep -E -o '[0-9]+/[0-9]+/[0-9]+'
 
 > ## Try it
 > 
-> 10. Use 'grep -E -o' on wordplay1.txt to match *all* of any line that starts with a 'c'  
-> 11. Use 'grep -E -o' on wordplay1.txt to match the *first word* of lines starting with a 'c'  
-> 12. Modify previous answer to keep words 5 or 6 letters long only.
-> 13. Use 'grep -E -o' on wordplay1.txt to match both 'stand' and 'outstanding'
+> Have a look at 'namesndates.txt' (```cat namesndates.txt```)
+> 14. Use 'grep -E -o' on namesndates.txt to list times (e.g. 20:57).
+> 15. Use 'grep -E -o' on namesndates.txt to list all calendar dates.
+> 16. Consider extra information we know about dates: days will be at most 31, months at most 12.  
+>     Could we use aspects of this information within our regex for more sensibleness checking?
 > 
 > > ## Solution
 > >
 > > ~~~
-> > grep -E -o '^c.+' wordplay1.txt
-> > grep -E -o '^c[a-z]+' wordplay1.txt
-> > grep -E -o -w '^c[a-z]{4,5}' wordplay1.txt
-> > grep -E -o '(out)?stand(ing)?' wordplay1.txt
+> > grep -E -o '[0-9]{1,2}:[0-9]{1,2}' namesndates.txt
+> > grep -E -o '[0-9]{1,2}/[0-9]{1,2}/([0-9]{2}|[0-9]{4})' namesndates.txt
+> > grep -E -o '[0-3]?[0-9]/[0-1]?[0-9]/([0-9]{2}|[0-9]{4})' namesndates.txt
 > > ~~~
 > > {: .language-bash}
 > {: .solution}

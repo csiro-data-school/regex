@@ -7,10 +7,17 @@ questions:
 objectives:
 - "Learn to incorporate predefined character classes into regular expressions"
 keypoints:
-- "grep in Extended Regex mode has a number of predefined character classes"
-- "Examples include:"
-- " ``` '[:alpha:]', '[:alnum:]', '[:digit:]', '[:upper:]', '[:lower:]', '[:punct:]', '[:space:]' ``` "
-- " ``` \\w \\W \\s \\S \\b \\B \\> \\< ``` "
+- "grep in Extended Regex mode has a number of predefined character classes:"
+- " ``` [:alpha:]  [:alnum:]  [:digit:]  [:upper:]  [:lower:]  [:punct:]  [:space:] ``` "
+- "and escape-character enabled shorthand character classes and anchors:"
+- " ``` \\w ``` : Word character [a-zA-Z0-9] OR a _ (underscore)"
+- " ``` \\W ``` : ```[^\\w]``` Inverse of \\w, any non-word character"
+- " ``` \\s ``` : Spaces, tabs, in some contexts new-lines"
+- " ``` \\S ``` : ```[^\\s]``` Inverse of \\s, any non-space character"
+- " ``` \\b ``` : Boundary between adjacent word and space, 0-length anchor"
+- " ``` \\B ``` : ```[^\\b]``` In the middle of a word or multiple spaces, 0-length anchor"
+- " ``` \\> ``` : Boundary at *start* of word between word and space, 0-length anchor"
+- " ``` \\< ``` : Boundary at *end* of word between word and space, 0-length anchor"
 - "You can refer back to an exact copy of a matched (group) using \\1, \\2, etc.."
 ---
 
