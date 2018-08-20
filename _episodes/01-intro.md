@@ -14,9 +14,29 @@ keypoints:
 ---
 
 
+## What are regular expressions?
+
+In short, a regular expression, or rational expression, or regex for short, is a sequence of 
+characters that act as a pattern for searching within text. So, what do we mean by pattern?  
+
+Consider a calendar date written down, say, 23/08/2018. We all recognise a date as being a 
+date when we see one written down this way. Why? Because there's a consistent pattern to it.
+We could describe the pattern of a date written this way as: one or two digits, a forward slash, 
+one or two digits, a forward slash, then either 2 digits or 4 digits. Using that pattern of
+what a date looks like, our eyes can scan a page of text and pick out other dates. 
+
+Regular expressions are a formalisation of such patterns into a consistent syntax, making use
+of metacharacters of certain meaning, such that we can guide a computer to search text in
+a way that is as specific or as ambiguous as required. It's a very powerful tool, being able
+to search text for patterns instead of just exact words. Taken further, it also allows for
+complex find & replaces, where the replacing is also following a pattern described with the
+same syntax.  
+
+
+
 ## The pitch
 
-Have you ever wanted to pull specific information out of a file, where a straight search for
+So, have you ever wanted to pull specific information out of a file, where a straight search for
 a specific word or phrase wouldn't cut it? Perhaps all you knew was the general "shape" of
 what you were looking for.  For example, you know there's a date involved, not what the date is,
 but that it would *look* like a date- day/month/year. Or maybe it's part of a specific 
@@ -55,33 +75,15 @@ Using a regular expression, this entire transformation can be done in a single c
 It's ugly, but it works (which might be the regular expression catch-phrase).  
 
 This is a regular expression substitution, containing a pattern that matches each part of our 
-file names and another pattern that defines the rearrangement. A goal for the end of today is 
-to understand how this works and to be able to implement similar effects yourselves.
-
-
-## What are regular expressions?
-
-In short, a regular expression, or rational expression, or regex for short, is a sequence of 
-characters that act as a pattern for searching within text. So, what do we mean by pattern?  
-
-Consider again a calendar date written down, say, 23/08/2018. We all recognise a date as being a 
-date when we see one written down this way. Why? Because there's a consistent pattern to it.
-We could describe the pattern of a date written this way as: one or two digits, a forward slash, 
-one or two digits, a forward slash, then either 2 digits or 4 digits. Using that pattern of
-what a date looks like, our eyes can scan a page of text and pick out other dates. 
-
-Regular expressions are a formalisation of such patterns into a consistent syntax, making use
-of metacharacters of certain meaning, such that we can guide a computer to search text in
-a way that is as specific or as ambiguous as required. It's a very powerful tool, being able
-to search text for patterns instead of just exact words. Taken further, it also allows for
-complex find & replaces, where the replacing is also following a pattern described with the
-same syntax.  
+file names and another pattern that defines the rearrangement. A goal at the end of today will 
+be to understand how this works and to be able to implement similar effects yourselves.
 
 
 
 There have been numerous implementations of regular expressions, but the major common
-implementations available today all follow a mostly-consistent syntax, which we'll be 
-learning today. So, for example, once you learn this regex syntax, you'll then be able
-to use it within certain Bash command line utilities, *or* make use of it within Python
-and/or R.
+implementations available today all follow a mostly-consistent syntax, which is what we'll be 
+learning. So, for example, once you learn this regex syntax, you'll then be able to use it 
+within certain Unix command line utilities, *or* make use of it within Python and/or R.
+
+
 
