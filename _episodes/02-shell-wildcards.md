@@ -45,7 +45,7 @@ sample3.txt  sample6.txt  sample9.txt  sampleC.txt  sampleF.txt
 ~~~
 {: .output}
 
-> ## Challenge
+> ## Try it
 > 
 > 1. Write a similar ls command to list .txt files with a 2 digit/char sample number.  
 > 2. Write a similar ls command to list for samples specifically in the range of 10-19.  
@@ -102,7 +102,7 @@ ls sample1[0-9].txt
 
 Remember: an entire '[*list*]' set will only match a *single* listed character at a time.
 
-> ## Challenge
+> ## Try it
 > 
 > 3. Write an ls command to list .txt files for samples 2 to 5.  
 > 4. Write an ls command to list .txt files for samples X, Y and Z and sample A.  
@@ -140,7 +140,7 @@ E.g.
 {: .language-bash}
 ... would match any character that's not a digit from 0 to 9.
 
-> ## Challenge
+> ## Try it
 > 
 > 7. Write an ls command to list .txt files for all samples *other* than those numbered 4 to 7 and 9.
 >  
@@ -218,7 +218,7 @@ Brace expansion is always the first order of business when the command line inte
 It's a useful tool, and while not quite fitting the regular expression theme, the concept
 of listing longer options in a this-OR-that fashion will be visited again in proper regexs.
 
-> ## Challenge
+> ## Try it
 > 
 > 8. Write an ls command to list files for samples 8 to 13 and CD.
 > 9. Write an ls command to list just .csv and .tab files for samples 11 and CD.
