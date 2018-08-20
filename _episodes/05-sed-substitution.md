@@ -12,12 +12,12 @@ keypoints:
 - "Use grouping () in pattern and back-reference \\1 in replacement..."
 - "... to rearrange or recontextualise parts of the matched input."
 - "Tips for writing complex substitutions:"
-- "1. Start with a complete real example pasted as your pattern."
-- "2. Escape (\\) any forward slashes, literal brackets, etc., as necessary."
-- "3. Circle the parts to retain, with round brackets."
-- "4. Write your replacement rules, using back-references."
-- "5. Substitution should now work for your specific real example."
-- "6. Abstract pattern with wildcards, etc., to make ambiguous enough for all required cases."
+- "\1. Start with a complete real example pasted as your pattern."
+- "\2. Escape (\\) any forward slashes, literal brackets, etc., as necessary."
+- "\3. Circle the parts to retain, with round brackets."
+- "\4. Write your replacement rules, using back-references."
+- "\5. Substitution should now work for your specific real example."
+- "\6. Abstract pattern with wildcards, etc., to make ambiguous enough for all required cases."
 ---
 
 ## Regex substitution syntax
@@ -291,7 +291,7 @@ two one
 
 > ## Try it - Fixing a file
 > 
-> Have another look at 'namesndates.txt' (```cat namesndates.txt```)
+> \10. Have another look at 'namesndates.txt' (```cat namesndates.txt```)
 >
 > A number of typos and inconsistencies were made when adding rows to 'namesndates.txt':
 > 1. One row has a name written as "surname, firstname", instead of "firstname surname".
