@@ -220,6 +220,7 @@ two one
 > 1. Complete the following, to convert dates in namesndates.txt from dd/mm/yyyy format, into
 > yymmdd format.  E.g. change 23/08/2012 into 120823.  
 > ``` sed -E 's; ; ;' namesndates.txt
+> 
 > > ## Solution
 > >
 > > ~~~

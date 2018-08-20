@@ -21,7 +21,6 @@ keypoints:
 - "```{n,m}``` quantifies previous character or group as occuring between n and m times"
 ---
 
-&#x7c;
 You may have used the command 'grep' before, which allows you to search for a matching string.
 It may be given a file name, to make it search within a file:  
 ~~~
