@@ -1,6 +1,6 @@
 ---
 title: "Regular Expressions: The pitch"
-teaching: 5
+teaching: 10
 exercises: 0
 questions:
 - "What sort of capabilities do regular expressions provide?"
