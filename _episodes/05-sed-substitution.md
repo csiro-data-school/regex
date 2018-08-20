@@ -12,12 +12,12 @@ keypoints:
 - "Use grouping () in pattern and back-reference \\1 in replacement..."
 - "... to rearrange or recontextualise parts of the matched input."
 - "Tips for writing complex substitutions:"
-- "\1. Start with a complete real example pasted as your pattern."
-- "\2. Escape (\\) any forward slashes, literal brackets, etc., as necessary."
-- "\3. Circle the parts to retain, with round brackets."
-- "\4. Write your replacement rules, using back-references."
-- "\5. Substitution should now work for your specific real example."
-- "\6. Abstract pattern with wildcards, etc., to make ambiguous enough for all required cases."
+- " 1\. Start with a complete real example pasted as your pattern."
+- " 2\. Escape (\\) any forward slashes, literal brackets, etc., as necessary."
+- " 3\. Circle the parts to retain, with round brackets."
+- " 4\. Write your replacement rules, using back-references."
+- " 5\. Substitution should now work for your specific real example."
+- " 6\. Abstract pattern with wildcards, etc., to make ambiguous enough for all required cases."
 ---
 
 ## Regex substitution syntax
@@ -239,7 +239,7 @@ two one
 
 > ## Try it - date format conversion
 > 
-> 8. Complete the following, to convert dates in namesndates.txt from dd/mm/yyyy format, into
+> Complete the following, to convert dates in namesndates.txt from dd/mm/yyyy format, into
 > yymmdd format.  E.g. change 23/08/2012 into 120823.  
 > ``` sed -E 's; ; ;' namesndates.txt
 > 
@@ -256,7 +256,7 @@ two one
 
 > ## Try it - make a FASTA file
 > 
-> 9. DNA and RNA sequences are often represented in the "FASTA" format, which looks like:
+> DNA and RNA sequences are often represented in the "FASTA" format, which looks like:
 > 
 > > ~~~
 > > >seqID
@@ -291,7 +291,7 @@ two one
 
 > ## Try it - Fixing a file
 > 
-> \10. Have another look at 'namesndates.txt' (```cat namesndates.txt```)
+> Have another look at 'namesndates.txt' (```cat namesndates.txt```)
 >
 > A number of typos and inconsistencies were made when adding rows to 'namesndates.txt':
 > 1. One row has a name written as "surname, firstname", instead of "firstname surname".
@@ -331,7 +331,7 @@ ambiguity required to match all that you want and not all that you don't want.
 
 > ## Try it - information from file names
 > 
-> 11. 'fileExample1.txt' contains the input text from the first regex example in the intro of this
+> 'fileExample1.txt' contains the input text from the first regex example in the intro of this
 > course.  Can you recreate that transformation?  
 > Convert this list of files (fileExample1.txt)...
 >
