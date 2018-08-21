@@ -19,6 +19,7 @@ keypoints:
 - "```*``` quantifies previous character or group as occuring zero or more times"
 - "```+``` quantifies previous character or group as occuring one or more times"
 - "```{n,m}``` quantifies previous character or group as occuring between n and m times"
+- "Quantifiers are greedy- will always match longest possible fit."
 ---
 
 You may have used the command 'grep' before, which allows you to search for a matching string.

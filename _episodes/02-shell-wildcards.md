@@ -5,10 +5,10 @@ exercises: 20
 questions:
 - "Are regular expressions available in standard Unix commands?"
 objectives:
-- "(Re)Introduce wildcards available in the Unix shell."
+- "(Re)Introduce wildcards available in the Unix shell for file selection."
 - "'*', '?', '[ ]', '[! ]' and '{ }'"
 keypoints:
-- "Use of wildcards in the Unix shell is a simple form of regular expressions."
+- "Use of wildcards in the Unix shell for file selection is a simple form of regular expressions."
 - "```*``` matches zero or more characters"
 - "```?``` matches exactly one character"
 - "```[ ]``` matches a character from a list or range of contained options"

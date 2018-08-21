@@ -109,7 +109,7 @@ blah Andrew
 {: .output}
 
 However, a greedy mode may be enabled which keeps looking for subsequent matches to replace, 
-by adding a 'g' to end of your substitution string:
+by adding a 'g' to the end of your substitution string:
 ~~~
 echo "hello Andrew" | sed -E 's/\w+/blah/g'
 ~~~
