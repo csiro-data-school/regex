@@ -15,10 +15,10 @@ keypoints:
 - "```^``` at the start of a regex means match at start of line"
 - "```$``` at the end of a regex means match at end of line"
 - "```.``` is the match-all (any single character) wildcard"
-- "```?``` quantifies previous character or group as occuring zero or one time"
-- "```*``` quantifies previous character or group as occuring zero or more times"
-- "```+``` quantifies previous character or group as occuring one or more times"
-- "```{n,m}``` quantifies previous character or group as occuring between n and m times"
+- "```?``` quantifies previous character or group as occurring zero or one time"
+- "```*``` quantifies previous character or group as occurring zero or more times"
+- "```+``` quantifies previous character or group as occurring one or more times"
+- "```{n,m}``` quantifies previous character or group as occurring between n and m times"
 - "Quantifiers are greedy- will always match longest possible fit."
 ---
 
