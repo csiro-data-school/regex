@@ -39,7 +39,10 @@ And substitutions may be made using:
   
 However, in Vim, the following characters all need to be escaped with a backslash to enable their 
 regex meanings:  
-```+  ?  |  &  {  (  )```
+```+  ?  |  &  {  (  )```  
+  
+E.g. ```:%s/(\w+).+/\1/g```  
+becomes  ```:%s/\(\w\+\).\+/\1/g```
   
 In a Vim substitute, if the pattern is left empty, it instead automatically replaces whatever was 
 last searched for.  
