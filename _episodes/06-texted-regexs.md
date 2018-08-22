@@ -19,8 +19,8 @@ looked at today, are fully implemented in many modern text editors.
   
 For example, on Windows: Notepad++, Sublime Text, ConTEXT...
   
-
-You'll usually find that the following patterns work that didn't work with Grep:  
+Patterns follow all the same syntax you've learnt using grep and sed.
+However, you'll usually find that the following patterns work that didn't work with Grep:  
   
 Written as | Equivalent to
 ----|----
