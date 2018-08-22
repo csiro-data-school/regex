@@ -26,7 +26,7 @@ Written as | Equivalent to
 ----|----
 \\d | [0-9] A digit
 \\D | [^0-9] Not a digit
-\\t | A tab character (does work in some version of sed, test yours)
+\\t | A tab character
 \\n | A newline, if program supports multi-line matching
   
   

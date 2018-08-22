@@ -17,8 +17,8 @@ keypoints:
 - "Reference: https://docs.python.org/3/library/re.html"
 ---
 
-Regular expressions, with search, replace and other capabilities, are available through
-the 're' library.  E.g. ```import re```.  
+Regular expressions, with search, replace and other capabilities, are available in through
+Python through the 're' library.  E.g. ```import re```.  
 
 Patterns follow all the same syntax you've learnt using grep and sed.
 However, you'll usually find that the following patterns work that didn't work with Grep:  
@@ -27,12 +27,12 @@ Written as | Equivalent to
 ----|----
 \\d | [0-9] A digit
 \\D | [^0-9] Not a digit
-\\t | A tab character (does work in some version of sed, test yours)
-\\n | A newline, if program supports multi-line matching
+\\t | A tab character
+\\n | A newline
 
   
 
-Python regexs, through the 're' library, are implemented through functions, where search patterns
+Python regexs, using the 're' library, are implemented through functions, where search patterns
 and strings are given as function arguments.  
   
 ## Searching
@@ -66,7 +66,7 @@ word2
 Note the 'r' in front of the search pattern, ```r'\b(\d+) (\w+)'```.  This enables the pattern 
 string to be passed to the re function in its literal form, which prevents backslashes being
 being interpreted as escapes too early, *before* the function looks at it.  Without the preceeding
-'r', double-backslahes would be necessary.  
+'r', double-backslashes would be necessary.  
 E.g. ```'\\b(\\d+) (\\w+)'```
 
 
@@ -109,6 +109,6 @@ print newstring
 {: .output}
 
   
-  
-More reference to the Python 're' library may be found at: 
+
+More reference for the Python 're' library may be found at: 
 https://docs.python.org/3/library/re.html
