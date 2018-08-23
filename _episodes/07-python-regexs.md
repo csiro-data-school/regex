@@ -1,6 +1,6 @@
 ---
 title: "Python regular expressions"
-teaching: 20
+teaching: 10
 exercises: 0
 questions:
 - "How can we invoke regular expressions using Python?"

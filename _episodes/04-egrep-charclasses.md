@@ -1,7 +1,7 @@
 ---
 title: "Pattern matching with grep -E, part 2"
 teaching: 30
-exercises: 20
+exercises: 30
 questions:
 - "How do we use predefined character classes for more complex search patterns?"
 objectives:
@@ -16,8 +16,8 @@ keypoints:
 - " ``` \\S ``` : ```[^\\s]``` Inverse of \\s, any non-space character"
 - " ``` \\b ``` : Boundary between adjacent word and space, 0-length anchor"
 - " ``` \\B ``` : ```[^\\b]``` In the middle of a word or multiple spaces, 0-length anchor"
-- " ``` \\> ``` : Boundary at *start* of word between word and space, 0-length anchor"
-- " ``` \\< ``` : Boundary at *end* of word between word and space, 0-length anchor"
+- " ``` \\< ``` : Boundary at *start* of word between word and space, 0-length anchor"
+- " ``` \\> ``` : Boundary at *end* of word between word and space, 0-length anchor"
 - "You can refer back to an exact copy of a matched (group) using \\1, \\2, etc.."
 ---
 
@@ -241,7 +241,7 @@ Our pattern matched to three letters, then to those same three letters repeated 
 ## Try it
 > 
 > 4. Grep 'wordplay1.txt' to print the only line that contains the same word repeated twice.
-> Hint: You may need the '\\b' word-boundary match.
+> Hint: You may need to use the '\\b' word-boundary anchor.
 > 5. Grep 'namesndates.txt' to print the name of a person whose firstname and surname start
 > with the same letter.
 > 6. Grep 'namesndates.txt' to print a date where the month and the day are the same number.

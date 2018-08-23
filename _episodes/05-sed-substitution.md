@@ -1,7 +1,7 @@
 ---
 title: "Find... and replace! With sed."
 teaching: 30
-exercises: 75
+exercises: 90
 questions:
 - "How do we find and replace content using regex patterns?"
 objectives:
@@ -206,7 +206,7 @@ two one
 > 
 > 5. Replace all vowels (a,e,i,o,u) with two copies of that same vowel
 > 6. Switch the places of the first and second word on each line
-> 7. Switch the places of the first and last word on each line, which retaining everything between
+> 7. Switch the places of the first and last word on each line, while retaining everything between
 > 
 > > ## Solution
 > >

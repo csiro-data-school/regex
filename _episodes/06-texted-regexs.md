@@ -1,6 +1,6 @@
 ---
 title: "Regexs within text editors"
-teaching: 10
+teaching: 5
 exercises: 0
 questions:
 - "How can we invoke regular expressions within certain text editors?"
