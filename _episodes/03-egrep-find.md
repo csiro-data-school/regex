@@ -100,7 +100,7 @@ Only the B met this criteria.
 
 
 
-> ## Try it
+> ## Try it 1
 > 
 > 1. Write a grep -E command to search wordplay1.txt for either 'corn' or 'cow'
 > 2. Try the above with -w option enabled (match as whole words only)
@@ -175,7 +175,7 @@ echo "1952 1986 2003 1995 2018" | grep -E -o '20[0-9][0-9]'
 
 
 
-> ## Try it
+> ## Try it 2
 > 
 > 5. Write a grep -E command to search wordplay1.txt for 4-letter words ending in 'oat'
 > 6. What if you didn't know if the words started with lower case or capitol letters?
@@ -216,7 +216,7 @@ lag
 
 
 
-> ## Try it
+> ## Try it 3
 > 
 > 9. Modify your 'oat' word finder to find any 4-letter 'oat' words other than 'boat' and 'goat'
 > 
@@ -360,7 +360,7 @@ sophisticated
 
 
 
-> ## Try it
+> ## Try it 4
 > 
 > 10. Use 'grep -E -o' on wordplay1.txt to match *all* of any line that starts with a 'c'  
 > 11. Use 'grep -E -o' on wordplay1.txt to match the *first word* of lines starting with a 'c'  
@@ -408,7 +408,7 @@ echo "11/06/91 5/9/2018" | grep -E -o '[0-9]+/[0-9]+/[0-9]+'
 
 
 
-> ## Try it
+> ## Try it 5
 > 
 > Have a look at 'namesndates.txt' (```cat namesndates.txt```)
 > 14. Use 'grep -E -o' on namesndates.txt to list times (e.g. 20:57).
