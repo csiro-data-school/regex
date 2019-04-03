@@ -131,7 +131,7 @@ helloAndrew
 
 
 
-> ## Try it
+> ## Try it 1
 > 
 > Using ```sed -E 's/ / /g' wordplay1.txt```...
 >
@@ -200,7 +200,7 @@ two one
 
 
 
-> ## Try it
+> ## Try it 2
 > 
 > Using ```sed -E 's/ / /g' wordplay1.txt```...
 > 
