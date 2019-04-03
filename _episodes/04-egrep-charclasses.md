@@ -143,7 +143,7 @@ hirdWor
 
 
 
-## Try it
+> ## Try it 1
 > 
 > 1. Use 'grep -E -o' on wordplay1.txt to print the first 2 words of any line using  
 >   a. [[:alpha:]] and [[:space:]]  
@@ -238,7 +238,7 @@ Our pattern matched to three letters, then to those same three letters repeated 
 
 
 
-## Try it
+> ## Try it 2
 > 
 > 4. Grep 'wordplay1.txt' to print the only line that contains the same word repeated twice.
 > Hint: You may need to use the '\\b' word-boundary anchor.
