@@ -47,12 +47,12 @@ parts.
 import re
 match = re.search(r'\b(\d+) (\w+)', 'word1 1234 word2')
 if match:
-    print match.group(0)
-    print match.span(0)
-    print match.group(1)
-    print match.group(2)
+    print(match.group(0))
+    print(match.span(0))
+    print(match.group(1))
+    print(match.group(2))
 else:
-    print "No Match"
+    print("No Match")
 ~~~
 {: .language-python}
 ~~~
@@ -80,7 +80,7 @@ not a word" as the delimiter for the split.
 
 ~~~
 listOfWords = re.split(r'\W+', 'word_1 $%^ 1234,word2-word3')
-print listOfWords
+print(listOfWords)
 ~~~
 {: .language-python}
 ~~~
@@ -100,7 +100,7 @@ Again, both the pattern and replacement/back-reference syntax is as we've learnt
 import re
 oldstring = 'Four 123 Five'
 newstring = re.sub( r'(\w+)\s+(\d+)\s+(\w+)', r'\2-\1-\3', oldstring )
-print newstring
+print(newstring)
 ~~~
 {: .language-python}
 ~~~
