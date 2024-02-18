@@ -177,10 +177,10 @@ echo "1952 1986 2003 1995 2018" | grep -E -o '20[0-9][0-9]'
 
 > ## Try it 2
 > 
-> 5. Write a grep -E command to search wordplay1.txt for 4-letter words ending in 'oat'
-> 6. What if you didn't know if the words started with lower case or capitol letters?
-> 7. What if *any* of the letters could be upper case or lower case?
-> 8. Write an alternative working answer to 7.
+> 1. Write a grep -E command to search wordplay1.txt for 4-letter words ending in 'oat'
+> 2. What if you didn't know if the words started with lower case or capitol letters?
+> 3. What if *any* of the letters could be upper case or lower case?
+> 4. Write an alternative working answer to 3.
 > 
 > > ## Solution
 > >
@@ -218,7 +218,7 @@ lag
 
 > ## Try it 3
 > 
-> 9. Modify your 'oat' word finder to find any 4-letter 'oat' words other than 'boat' and 'goat'
+> 1. Modify your 'oat' word finder to find any 4-letter 'oat' words other than 'boat' and 'goat'
 > 
 > > ## Solution
 > >
@@ -362,10 +362,10 @@ sophisticated
 
 > ## Try it 4
 > 
-> 10. Use 'grep -E -o' on wordplay1.txt to match *all* of any line that starts with a 'c'  
-> 11. Use 'grep -E -o' on wordplay1.txt to match the *first word* of lines starting with a 'c'  
-> 12. Modify previous answer to keep words 5 or 6 letters long only.
-> 13. Use 'grep -E -o' on wordplay1.txt to match both 'stand' and 'outstanding'
+> 1. Use 'grep -E -o' on wordplay1.txt to match *all* of any line that starts with a 'c'  
+> 2. Use 'grep -E -o' on wordplay1.txt to match the *first word* of lines starting with a 'c'  
+> 3. Modify previous answer to keep words 5 or 6 letters long only.
+> 4. Use 'grep -E -o' on wordplay1.txt to match both 'stand' and 'outstanding'
 > 
 > > ## Solution
 > >
@@ -411,9 +411,9 @@ echo "11/06/91 5/9/2018" | grep -E -o '[0-9]+/[0-9]+/[0-9]+'
 > ## Try it 5
 > 
 > Have a look at 'namesndates.txt' (```cat namesndates.txt```)
-> 14. Use 'grep -E -o' on namesndates.txt to list times (e.g. 20:57).
-> 15. Use 'grep -E -o' on namesndates.txt to list all calendar dates.
-> 16. Consider extra information we know about dates: days will be at most 31, months at most 12.  
+> 1. Use 'grep -E -o' on namesndates.txt to list times (e.g. 20:57).
+> 2. Use 'grep -E -o' on namesndates.txt to list all calendar dates.
+> 3. Consider extra information we know about dates: days will be at most 31, months at most 12.  
 >     Could we use aspects of this information within our regex for more sensibleness checking?
 > 
 > > ## Solution
